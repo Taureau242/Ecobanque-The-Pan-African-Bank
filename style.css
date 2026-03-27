@@ -3883,13 +3883,12 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
   .news-card.small { flex-direction: column; }
   .news-img-small { width: 100%; height: 80px; }
 }
-
 /* ==========================================================
-   NETTOYAGE UNIQUE POUR TOUTES LES PAGES (IPHONE)
+   NETTOYAGE UNIQUE POUR IPHONE (Écran < 480px)
 ============================================================= */
 @media screen and (max-width: 480px) {
 
-    /* 1. Sécurité globale : rien ne doit dépasser à droite */
+    /* 1. Empêcher le site de bouger à droite/gauche */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
@@ -3897,39 +3896,28 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         padding: 0 !important;
     }
 
-    /* 2. LES EN-TÊTES (Gère .navbar ET .ecobank-header d'un coup) */
-    header, .ecobank-header, .navbar, .header-top {
+    /* 2. LE HEADER (Barre du haut) */
+    /* On force le logo et le menu à s'empiler */
+    header, .ecobank-header, .navbar {
         height: auto !important;
         display: flex !important;
-        flex-direction: column !important; /* Empilement vertical */
-        align-items: center !important;
+        flex-direction: column !important;
         width: 100% !important;
+        background-color: var(--eco-blue-dark) !important;
         padding: 10px 0 !important;
-        position: relative !important;
     }
 
-    /* 3. LA PETITE BARRE DE NAVIGATION (Accueil | Particuliers...) */
+    /* 3. LA BARRE GRISE (Accueil | Particuliers | Entreprises...) */
     .user-nav {
         display: flex !important;
-        flex-wrap: wrap !important; /* Permet de passer à la ligne sur iPhone SE */
+        flex-wrap: wrap !important; /* Permet de passer à la ligne */
         justify-content: center !important;
-        gap: 8px !important;
+        gap: 5px !important;
         padding: 10px !important;
+        background: #f8f9fa !important;
         width: 100% !important;
-        background: #f8f9fa !important; /* Fond clair pour séparer du menu bleu */
     }
-
-    .user-nav a {
-        font-size: 11px !important;
-        color: var(--eco-blue-dark) !important;
-        padding: 6px 10px !important;
-        border: 1px solid #ddd !important;
-        border-radius: 4px !important;
-        text-decoration: none !important;
-        white-space: nowrap !important;
-    }
-
-    .user-nav span { display: none !important; } /* On cache les barres "|" */
+@media screen and (max-width: 480px) {
 
     /* 1. On force la barre de navigation à s'étirer verticalement */
     .navbar, .ecobank-header, header {
@@ -3984,23 +3972,52 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         border-radius: 30px !important;
     }
 }
+    .user-nav a {
+        font-size: 11px !important;
+        color: var(--eco-blue-dark) !important;
+        padding: 5px 8px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+    }
 
-    /* 6. FIX POUR LES CONTENUS QUI SE CHEVAUCHENT (Slider / Hero) */
-    .hero-content, .slide-text, .carousel-caption, .hero-slider {
-        position: static !important; /* Annule le chevauchement */
+    .user-nav span { display: none !important; } /* On cache les "|" */
+
+    /* 4. LE MENU PRINCIPAL (Liens bleus) */
+    .nav-links {
+        display: flex !important;
+        flex-direction: column !important; /* Empilement vertical */
         width: 100% !important;
-        padding: 20px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    .nav-links li {
+        width: 100% !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+
+    .nav-links li a {
+        display: block !important;
+        padding: 15px !important;
         text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
+        color: white !important;
+        width: 100% !important;
     }
 
-    /* 7. LA BARRE BLEUE LATÉRALE (Internet Banking) */
-    .hero-cta-group, .hero-sidebar, .carousel-sidebar {
-        position: static !important;
-        width: 100% !important;
-        margin-top: 20px !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
+    /* 5. LE CONTENU (Davantage de possibilités, etc.) */
+    /* On annule les positions qui font que le texte se chevauche */
+    .hero-content, .slide-text, .carousel-caption {
+        position: static !important; 
+        width: 90% !important;
+        margin: 20px auto !important;
+        text-align: center !important;
     }
+
+    /* 6. LES TITRES */
+    h1 {
+        font-size: 1.5rem !important;
+        width: 100% !important;
+    }
+}
