@@ -3883,72 +3883,70 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
   .news-card.small { flex-direction: column; }
   .news-img-small { width: 100%; height: 80px; }
 }
+
+
+
 /* ==========================================================
-   NETTOYAGE UNIQUE POUR IPHONE (Écran < 480px)
+   NETTOYAGE FINAL : UN SEUL BLOC POUR TOUT LE SITE
 ============================================================= */
 @media screen and (max-width: 480px) {
 
-    /* 1. Empêcher le site de bouger à droite/gauche */
-    html, body {
-        overflow-x: hidden !important;
+    /* 1. On force la barre à s'agrandir pour tout contenir */
+    .navbar, .ecobank-header, header {
+        display: flex !important;
+        flex-direction: column !important; /* Empilement vertical obligatoire */
+        height: auto !important; /* Pour que le fond bleu suive le contenu */
+        min-height: 100px !important;
+        padding: 20px 0 !important;
+        align-items: center !important;
+        position: relative !important;
+    }
+
+    /* 2. On libère le logo (on enlève le flottement) */
+    .logo {
+        position: static !important; 
+        margin-bottom: 25px !important; /* Espace vital entre le logo et le menu */
+        display: block !important;
+        text-align: center !important;
+        width: auto !important;
+    }
+
+    /* 3. On répare la liste de liens (nav-links) */
+    .nav-links {
+        display: flex !important;
+        flex-direction: column !important; /* Un lien par ligne */
+        position: static !important;
         width: 100% !important;
+        padding: 0 !important;
         margin: 0 !important;
-        padding: 0 !important;
+        list-style: none !important;
     }
 
-    /* 2. LE HEADER (Barre du haut) */
-    /* On force le logo et le menu à s'empiler */
-    header, .ecobank-header, .navbar {
-        height: auto !important;
-        display: flex !important;
-        flex-direction: column !important;
+    .nav-links li {
         width: 100% !important;
-        background-color: var(--eco-blue-dark) !important;
-        padding: 10px 0 !important;
+        text-align: center !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
-    /* 3. LA BARRE GRISE (Accueil | Particuliers | Entreprises...) */
-    .user-nav {
-        display: flex !important;
-        flex-wrap: wrap !important; /* Permet de passer à la ligne */
-        justify-content: center !important;
-        gap: 5px !important;
-        padding: 10px !important;
-        background: #f8f9fa !important;
-        width: 100% !important;
-    }
-@media screen and (max-width: 480px) {
-
-    /* 1. On empêche TOUT le site de glisser vers la droite */
-    html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        position: relative;
+    .nav-links li a {
+        display: block !important;
+        padding: 15px 0 !important;
+        font-size: 16px !important;
+        color: white !important;
+        text-decoration: none !important;
     }
 
-    /* 2. Correction pour la zone "Particuliers / Entreprises" (Cercle 1) */
-    /* On les force à s'empiler pour qu'ils ne dépassent pas */
-    .nav, .menu-top, .navigation { 
-        display: flex !important;
-        flex-wrap: wrap !important; /* Permet d'aller à la ligne */
-        justify-content: center !important;
-        gap: 5px !important;
-        width: 100% !important;
-        padding: 0 !important;
+    /* 4. Le bouton Connexion (le dernier) */
+    .nav-links li:last-child a {
+        background: var(--eco-yellow) !important;
+        color: var(--eco-blue-dark) !important;
+        margin: 15px auto !important;
+        width: 80% !important;
+        border-radius: 30px !important;
     }
 
-    /* 3. Correction pour le titre "Ecobank Mobile" (Cercle 2) */
-    /* On réduit la taille pour qu'il tienne sur la largeur de l'écran */
-    h1, .hero-title, .main-title {
-        font-size: 1.4rem !important; /* On réduit la police */
-        width: 90% !important; /* On laisse de l'espace sur les côtés */
-        margin: 0 auto !important; /* On centre le texte */
-        word-wrap: break-word !important; /* On coupe les mots si besoin */
-        white-space: normal !important; /* On autorise le retour à la ligne */
+    /* 5. On cache les barres de séparation "|" pour les pages Particuliers/Entreprises */
+    .user-nav span {
+        display: none !important;
     }
-
-    /* 4. On s'assure que les conteneurs ne font pas plus de 100% */
-    section, div, header {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
+}
