@@ -8,24 +8,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<header>
-<nav class="navbar">
-    <a href="Ecobanque-The-Pan-African-Bank/index.html" class="logo" style="text-decoration:none; font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:white;">ECO<span style="color:var(--eco-yellow)">BANK</span></a>
-    <ul class="nav-links">
-        <li><a href="Acceuil.html"><i class="fas fa-home" style="margin-right:5px"></i>Accueil</a></li>
-        <li><a href="Particulier.html" style="color:var(--eco-yellow)">Particuliers</a></li>
-        <li><a href="Entreprises.html">Entreprises</a></li>
-        <li><a href="Banque_d_investissement.html">Banque d'Investissement</a></li>
-        <li><a href="Le_groupe.html">Le Groupe</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li>
-            <a href="connexion.html" style="background:var(--eco-yellow); color:var(--eco-blue-dark); padding:8px 18px; border-radius:30px; font-weight:700;">
-                <i class="fas fa-key" style="margin-right:5px;"></i>Connexion
-            </a>
-        </li>
-    </ul>
-</nav>
+
+<header class="ecobank-header">
+    <div class="header-top">
+        <nav class="user-nav">
+            <a href="index.html">Accueil</a>
+            <span style="color:#ccc">|</span>
+            <a href="Particulier.html">Particuliers</a>
+            <span style="color:#ccc">|</span>
+            <a href="Entreprises.html">Entreprises</a>
+            <span style="color:#ccc">|</span>
+            <a href="Banque_d_investissement.html">Banque d'Investissement</a>
+            <span style="color:#ccc">|</span>
+            <a href="Le_groupe.html" class="active">Le Groupe</a>
+        </nav>
+        
+        
+        <div class="Social-Media-Links">
+            <span>Suivez-nous :</span>
+            <a href="https://www.youtube.com/user/EcobankGroup"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/GroupEcobank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/EcobankGroup"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/GroupEcobank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ecobank-group/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+   
+   
+    <div class="header-main-bar">
+        <div class="header-main-content container">
+            <div class="logo">
+                <span class="logo-text">ECO<span>BANK</span></span>
+            </div>
+            <div class="actions-group">
+               
+               
+               
+               
+               
+                <!-- Formulaire de recherche dans le header -->
+                <form action="#">
+                    <input type="text" placeholder="Rechercher...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="contact.html" class="header-action"><i class="fas fa-phone"></i> Nous Contacter</a>
+                <a href="connexion.html" class="header-action"><i class="fas fa-key"></i> Connexion</a>
+                <a href="Lancement_d_alerte.html" class="header-action"><i class="fas fa-bell"></i> Alerte</a>
+            </div>
+        </div>
+    </div>
+    </nav>
 </header>
+
 <main>
     <!-- Hero Particuliers -->
     <section style="background:linear-gradient(135deg,var(--eco-blue-dark) 0%,var(--eco-blue-mid) 60%,var(--eco-turquoise) 100%); padding:80px 24px; position:relative; overflow:hidden; animation: fadeIn 0.7s ease both;">
