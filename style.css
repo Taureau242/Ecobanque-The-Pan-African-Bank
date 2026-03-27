@@ -4167,3 +4167,101 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
     }
 }
 
+
+
+/* ============================================================
+   CORRECTIF MOBILE — HEADER COMPACT (iPhone / Android)
+   À placer en FIN de fichier pour surcharger les règles précédentes
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+
+    /* 1. Barre supérieure (Particuliers, Entreprises…) : compacte et horizontale */
+    .header-top {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        padding: 6px 12px !important;
+        gap: 0 !important;
+    }
+
+    /* On masque les réseaux sociaux pour gagner de la place */
+    .Social-Media-Links {
+        display: none !important;
+    }
+
+    /* Liens Particuliers / Entreprises / etc. : alignés côte à côte, serrés */
+    .user-nav {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        padding: 0 !important;
+        background: transparent !important;
+        width: 100% !important;
+    }
+
+    .user-nav a {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+        width: auto !important;
+        white-space: nowrap;
+    }
+
+    /* 2. Logo ECOBANK : taille réduite, moins de marges */
+    .logo img {
+        height: 32px !important;
+    }
+
+    .logo-text {
+        font-size: 18px !important;
+    }
+
+    /* 3. Barre principale bleue : padding réduit */
+    .header-main-bar {
+        padding: 8px 14px !important;
+    }
+
+    .header-main-content {
+        gap: 10px;
+    }
+
+    /* 4. Barre de recherche et actions : compactes */
+    .actions-group {
+        gap: 8px !important;
+    }
+
+    .actions-group form {
+        display: none !important; /* Cache la recherche sur mobile pour gagner de la place */
+    }
+
+    .header-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 6px !important;
+        width: auto !important;
+        margin: 0 !important;
+        grid-template-columns: unset !important;
+    }
+
+    .header-actions a {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+    }
+}
+
+/* Extra serré pour très petits écrans (iPhone SE, etc.) */
+@media screen and (max-width: 390px) {
+    .user-nav a {
+        font-size: 10px !important;
+        padding: 3px 6px !important;
+    }
+
+    .logo-text {
+        font-size: 16px !important;
+    }
+
+    .logo img {
+        height: 26px !important;
+    }
+}
