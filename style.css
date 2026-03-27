@@ -3884,93 +3884,90 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
   .news-img-small { width: 100%; height: 80px; }
 }
 
-
-
 @media screen and (max-width: 480px) {
-
-    /* Reset propre mobile */
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
+    html, body {
+        width: 100%;
         overflow-x: hidden;
     }
 
-    /* HEADER GLOBAL */
-    header, 
-    .ecobank-header, 
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        padding: 15px 0;
+    * {
+        max-width: 100% !important;
     }
 
-    /* LOGO */
+    /* Supprime tous les position:absolute dangereux */
+    .hero-text,
+    .card,
+    .overlay,
+    .slider-content {
+        position: static !important;
+        width: 90% !important;
+        margin: 10px auto !important;
+    }
+
+
+    /* 1. On force la barre à s'agrandir verticalement */
+    header, .ecobank-header, .navbar {
+        display: flex ;
+        flex-direction: column ; /* Empilement vertical */
+        height: auto ; /* Pour que le fond bleu s'étire */
+        padding: 20px 0 ;
+        align-items: center ;
+        position: relative ;
+    }
+
+    /* 2. On libère le logo pour qu'il ne soit plus écrasé */
     .logo {
-        position: static;
-        margin-bottom: 15px;
-        text-align: center;
-        width: auto;
+        position: static ; 
+        margin-bottom: 20px ; /* Espace vital entre le logo et le menu */
+        display: block ;
+        text-align: center ;
+        width: auto ;
+        transform: none ;
     }
 
-    /* NAVIGATION */
+    /* 3. On répare la liste de liens (nav-links) */
     .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        display: flex ;
+        flex-direction: column ; /* Un lien par ligne */
+        position: static ; /* Crucial pour ne plus chevaucher le logo */
+        width: 100% ;
+        padding: 0 ;
+        margin: 0 ;
+        list-style: none ;
     }
 
     .nav-links li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 100% ;
+        text-align: center ;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) ;
     }
 
     .nav-links li a {
-        display: block;
-        padding: 12px 0;
-        font-size: 15px;
-        color: white;
+        display: block ;
+        padding: 15px 0 ;
+        font-size: 16px ;
+        color: white ;
     }
 
-    /* BOUTON CONNEXION */
+    /* 4. Le bouton Connexion (le dernier li) */
     .nav-links li:last-child a {
         background: var(--eco-yellow);
-        color: var(--eco-blue-dark);
-        margin: 15px auto;
-        width: 80%;
-        border-radius: 25px;
-        font-weight: bold;
+        color: var(--eco-blue-dark) ;
+        margin: 15px auto ;
+        width: 80% ;
+        border-radius: 30px ;
+        font-weight: bold ;
     }
 
-    /* USER NAV */
+    
     .user-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
+        display: flex ;
+        flex-direction: column ;
+        gap: 5px ;
     }
-
-    .user-nav span {
-        display: none;
-    }
-
-    /* IMAGES / SLIDER (TRÈS IMPORTANT) */
-    img,
-    .hero,
-    .slider,
-    .banner {
-        width: 100%;
-        max-width: 100%;
-        display: block;
-    }
+    .user-nav span { display: none; }
 }
+    
+    .user-nav span {
+        display: none 
+    }
