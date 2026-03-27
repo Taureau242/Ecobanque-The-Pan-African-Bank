@@ -3892,160 +3892,60 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
   .search-controls { flex-direction: column; }
 }
 
-/* --- STYLE POUR TOUS LES SMARTPHONES --- */
-/* --- SPECIAL MOBILE (IPHONE / ANDROID) --- */
+/* ==========================================================
+   NETTOYAGE UNIQUE POUR IPHONE (Écran < 480px)
+============================================================= */
 @media screen and (max-width: 480px) {
-    
-   /* 1. On empêche TOUT le site de glisser vers la droite */
+
+    /* 1. Empêcher le site de bouger à droite/gauche */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
-        position: relative;
-    }
-
-    
-    /* On les force à s'empiler pour qu'ils ne dépassent pas */
-    
-/* On cible la barre de navigation que tu m'as montrée */
-    .user-nav {
-        display: flex !important;
-        flex-direction: column !important; /* On empile les liens verticalement */
-        align-items: center !important;
-        background-color: var(--eco-blue-dark); /* On s'assure qu'on voit bien le fond */
-        padding: 15px 0 !important;
-        width: 100% !important;
-    }
-
-    /* On stylise les liens pour qu'ils ressemblent à un vrai menu mobile */
-    .user-nav a {
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-        padding: 10px 0 !important;
-        color: white !important;
-        text-decoration: none !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; /* Petite séparation */
-        font-size: 14px !important;
-    }
-
-    /* On cache les barres de séparation "|" qui ne servent plus à rien en vertical */
-    .user-nav span {
-        display: none !important;
-    }
-
-    /* Si ton header est "fixed", on s'assure qu'il ne cache pas le début de la page */
-    .ecobank-header {
-        height: auto !important;
-        position: relative !important;
-    }
-    .nav, .menu-top, .navigation { 
-        display: flex !important;
-        flex-wrap: wrap !important; /* Permet d'aller à la ligne */
-        justify-content: center !important;
-        gap: 5px !important;
-        width: 100% !important;
+        margin: 0 !important;
         padding: 0 !important;
     }
 
-    /* 3. Correction pour le titre "Ecobank Mobile" (Cercle 2) */
-    /* On réduit la taille pour qu'il tienne sur la largeur de l'écran */
-    h1, .hero-title, .main-title {
-        font-size: 1.4rem !important; /* On réduit la police */
-        width: 90% !important; /* On laisse de l'espace sur les côtés */
-        margin: 0 auto !important; /* On centre le texte */
-        word-wrap: break-word !important; /* On coupe les mots si besoin */
-        white-space: normal !important; /* On autorise le retour à la ligne */
-    }
-
-    /* 4. On s'assure que les conteneurs ne font pas plus de 100% */
-    section, div, header {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-
-    /* Tes boutons (Ouvrir un compte) doivent être larges pour le pouce */
-    .btn, .button {
-        width: 90% !important;
-        margin: 10px auto !important;
-        display: block !important;
-    }
-
-    .hero-section {
-    background-attachment: scroll !important; /* Fixe le bug de tremblement sur iPhone */
-}
-/* Force les liens à s'empiler en colonne ou à aller à la ligne */
-    .nav-container, .menu, .header-top-menu, ul[class*="nav"] {
-        display: flex !important;
-        flex-direction: column !important; /* Empilement vertical */
-        align-items: center !important;
-        gap: 10px !important;
-        width: 100% !important;
-        padding: 10px 0 !important;
-    }
-
-    .nav-item, .menu-item, li[class*="nav"] {
-        width: 90% !important; /* Prend presque toute la largeur */
-        text-align: center !important;
-        border-bottom: 1px solid rgba(0,0,0,0.1) !important; /* Petite ligne séparatrice */
-        padding: 8px 0 !important;
-    }
-    .hero-slider, .slide-content, .carousel-item {
-        display: flex !important;
-        flex-direction: column !important; /* Empilement vertical */
-        padding: 15px !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-    }
-
-    /* Le bloc de texte "Davantage de possibilités" */
-    .hero-content, .slide-text, .carousel-caption {
-        width: 100% !important;
-        max-width: 100% !important;
-        position: static !important; 
-        margin-bottom: 20px !important;
-        text-align: center !important;
-        padding: 15px !important;
-    }
-
-/* METTRE TOUT CECI À LA TOUTE FIN DU FICHIER STYLE.CSS */
-
-@media screen and (max-width: 480px) {
-    /* 1. On réinitialise tout le conteneur du haut */
+    /* 2. LE HEADER (Barre du haut) */
+    /* On force le logo et le menu à s'empiler */
     header, .ecobank-header, .navbar {
         height: auto !important;
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
+        background-color: var(--eco-blue-dark) !important;
         padding: 10px 0 !important;
     }
 
-    /* 2. On s'occupe de la petite barre grise (user-nav) */
+    /* 3. LA BARRE GRISE (Accueil | Particuliers | Entreprises...) */
     .user-nav {
         display: flex !important;
-        flex-wrap: wrap !important; /* Force le retour à la ligne */
+        flex-wrap: wrap !important; /* Permet de passer à la ligne */
         justify-content: center !important;
-        gap: 8px !important;
+        gap: 5px !important;
         padding: 10px !important;
+        background: #f8f9fa !important;
         width: 100% !important;
     }
 
     .user-nav a {
-        font-size: 12px !important;
-        padding: 5px !important;
-        white-space: nowrap !important; /* Empêche les mots de se couper */
+        font-size: 11px !important;
+        color: var(--eco-blue-dark) !important;
+        padding: 5px 8px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
     }
 
-    .user-nav span { display: none !important; } /* On cache les | */
+    .user-nav span { display: none !important; } /* On cache les "|" */
 
-    /* 3. On s'occupe de la barre bleue principale (nav-links) */
+    /* 4. LE MENU PRINCIPAL (Liens bleus) */
     .nav-links {
         display: flex !important;
-        flex-direction: column !important; /* Empilement vertical obligatoire */
+        flex-direction: column !important; /* Empilement vertical */
         width: 100% !important;
         padding: 0 !important;
-        margin: 15px 0 0 0 !important;
-        background: var(--eco-blue-dark) !important;
+        margin: 0 !important;
+        list-style: none !important;
     }
 
     .nav-links li {
@@ -4057,34 +3957,22 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         display: block !important;
         padding: 15px !important;
         text-align: center !important;
+        color: white !important;
         width: 100% !important;
     }
 
-    /* 4. On règle le problème du logo qui pousse tout */
-    .logo {
-        margin: 0 auto 10px auto !important;
-        display: block !important;
-        text-align: center !important;
-    }    /* La barre bleue latérale "Internet Banking" */
-    .hero-cta-group, .hero-sidebar, .carousel-sidebar {
-        width: 100% !important;
-        max-width: 90% !important; 
+    /* 5. LE CONTENU (Davantage de possibilités, etc.) */
+    /* On annule les positions qui font que le texte se chevauche */
+    .hero-content, .slide-text, .carousel-caption {
         position: static !important; 
-        margin: 10px auto !important;
-        display: flex !important;
-        flex-direction: row !important; 
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        padding: 15px !important;
+        width: 90% !important;
+        margin: 20px auto !important;
+        text-align: center !important;
     }
 
-    /* Les icônes individuelles dans la barre bleue */
-    .hero-action, .sidebar-item {
-        width: auto !important;
-        min-width: 70px !important;
-        font-size: 0.75rem !important; 
-        flex-direction: column !important; 
-        align-items: center !important;
+    /* 6. LES TITRES */
+    h1 {
+        font-size: 1.5rem !important;
+        width: 100% !important;
     }
 }
