@@ -3975,21 +3975,6 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
 
     @media screen and (max-width: 480px) {
 
-      .nav-item .dropdown {
-    top: 100%;
-    left: 0;
-    background: #ffffff;
-    min-width: 200px;
-    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-    box-shadow: 0 8px 24px rgba(0, 91, 130, 0.18);
-    z-index: 2000;
-    list-style: none;
-    padding: 8px 0;
-    margin: 0;
-    border-top: 3px solid var(--eco-yellow);
-    animation: fadeIn 0.2s ease both;
-}
-
 .hero-section {
     /* Sur PC, on aligne le texte plus à gauche avec plus d'espace */
     padding-left: 10%; 
