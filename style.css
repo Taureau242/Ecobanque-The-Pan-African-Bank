@@ -4076,16 +4076,51 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         padding: 20px 15px;
         text-align: center; /* Centre le texte pour un meilleur look mobile */
     }
+    /* 1. On resserre la liste (Particuliers, Entreprises...) */
+    .user-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important; /* Espace entre les liens */
+        padding: 20px 0 !important;
+        background: #fff;
+    }
 
-    /* 2. On ajuste la taille du logo (texte) qui était trop large */
+    .user-nav a {
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        color: var(--eco-blue-dark) !important;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 2. On réduit le logo ECOBANK qui prend trop de place */
     .logo {
-      font-size: 18px;
-        white-space: nowrap ;
-        display: inline-block ;
-        margin-bottom: 10px;
-        width: auto 
-          }
+        font-size: 20px !important; /* Taille réduite pour mobile */
+        display: block !important;
+        margin: 15px auto !important;
+        text-align: center;
+    }
 
+    /* 3. On ajuste la barre de recherche et les icônes (Nous contacter, Connexion) */
+    .search-container, .header-actions {
+        width: 90% !important;
+        margin: 10px auto !important;
+    }
+
+    .header-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr; /* Met "Nous contacter" et "Connexion" côte à côte */
+        gap: 10px;
+    }
+
+    .header-actions a {
+        font-size: 13px !important;
+        padding: 10px 5px !important;
+        justify-content: center !important;
+    }
+}
     /* 3. On s'assure que les images ou contenus dans la grille prennent toute la largeur */
     .hero-grid > div {
         width: 100% ;
@@ -4097,7 +4132,7 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         flex-direction: column;
         padding: 15px;
     }
-} 
+ 
     .quick-actions, .services-bar, .action-grid {
         display: flex !important;
         flex-direction: column !important; /* Empile les boutons */
