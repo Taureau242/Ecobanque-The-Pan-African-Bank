@@ -3891,3 +3891,35 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
   .slide-text h1 { font-size: 1.5rem; }
   .search-controls { flex-direction: column; }
 }
+
+
+/* --- STYLE POUR TOUS LES SMARTPHONES --- */
+@media screen and (max-width: 767px) {
+  .hero-section {
+    height: 100vh;
+    padding: 2rem 1.5rem; /* Marges fluides */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le contenu verticalement */
+  }
+
+  .hero-content h1 {
+    /* Utilise clamp pour que le titre ne soit ni trop gros ni trop petit */
+    font-size: clamp(1.8rem, 8vw, 2.5rem); 
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    max-width: 90%; /* Évite que le texte touche le bord droit */
+  }
+
+  .btn-discover {
+    width: 100%; /* Le bouton prend toute la largeur sur petit téléphone */
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Pousse le bouton vers le bas si besoin */
+  }
+}
+  
