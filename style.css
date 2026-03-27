@@ -3990,4 +3990,50 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
     animation: fadeIn 0.2s ease both;
 }
 
+.hero-section {
+    /* Sur PC, on aligne le texte plus à gauche avec plus d'espace */
+    padding-left: 10%; 
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    /* On limite la largeur du bloc de texte pour qu'il ne s'étale pas trop */
+    max-width: 50%; 
+  }
+
+  .hero-content h1 {
+    /* On peut agrandir un peu la police sur grand écran */
+    font-size: 4rem;
+  }
+
+
+
+  .votre-menu-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap; /* Crucial pour que les éléments descendent s'il n'y a plus de place */
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.nav-item {
+    flex: 1 1 auto; /* Permet aux éléments de s'ajuster */
+    text-align: center;
+    min-width: 80px; /* Évite qu'ils ne deviennent trop minuscules */
+}
+
+/* Remplace la taille fixe de ton titre principal (h1 ou .hero-title) */
+.hero-title {
+    font-size: clamp(1.5rem, 8vw, 3rem); /* Minimum 1.5rem, s'adapte à 8% de l'écran, Max 3rem */
+    width: 100%;
+    word-wrap: break-word; /* Force la coupure si un mot est trop long */
+    line-height: 1.2;
+}
+
+
 }
