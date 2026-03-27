@@ -3903,8 +3903,41 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         position: relative;
     }
 
-    /* 2. Correction pour la zone "Particuliers / Entreprises" (Cercle 1) */
+    
     /* On les force à s'empiler pour qu'ils ne dépassent pas */
+    
+/* On cible la barre de navigation que tu m'as montrée */
+    .user-nav {
+        display: flex !important;
+        flex-direction: column !important; /* On empile les liens verticalement */
+        align-items: center !important;
+        background-color: var(--eco-blue-dark); /* On s'assure qu'on voit bien le fond */
+        padding: 15px 0 !important;
+        width: 100% !important;
+    }
+
+    /* On stylise les liens pour qu'ils ressemblent à un vrai menu mobile */
+    .user-nav a {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10px 0 !important;
+        color: white !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; /* Petite séparation */
+        font-size: 14px !important;
+    }
+
+    /* On cache les barres de séparation "|" qui ne servent plus à rien en vertical */
+    .user-nav span {
+        display: none !important;
+    }
+
+    /* Si ton header est "fixed", on s'assure qu'il ne cache pas le début de la page */
+    .ecobank-header {
+        height: auto !important;
+        position: relative !important;
+    }
     .nav, .menu-top, .navigation { 
         display: flex !important;
         flex-wrap: wrap !important; /* Permet d'aller à la ligne */
