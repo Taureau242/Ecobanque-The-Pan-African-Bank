@@ -3981,8 +3981,6 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
     html, body {
         overflow-x: hidden;
         width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
     /* 2. Header & Navigation */
@@ -3994,13 +3992,10 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
 
     .user-nav {
         display: flex;
-        flex-wrap: wrap; /* Permet aux liens de passer à la ligne si besoin */
         justify-content: center;
         gap: 8px;
         font-size: 12px;
     }
-
-    .user-nav span { display: none; } /* On cache les barres de séparation | */
 
     .navbar {
         flex-direction: column;
