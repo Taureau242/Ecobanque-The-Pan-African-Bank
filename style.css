@@ -4079,15 +4079,16 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
 
     /* 2. On ajuste la taille du logo (texte) qui était trop large */
     .logo {
-        font-size: 20px !important; /* On réduit la taille pour qu'il tienne sur une ligne */
-        display: inline-block;
-        margin-bottom: 15px;
-        white-space: nowrap; /* Empêche le nom de se couper */
-    }
+      font-size: 18px;
+        white-space: nowrap ;
+        display: inline-block ;
+        margin-bottom: 10px;
+        width: auto 
+          }
 
     /* 3. On s'assure que les images ou contenus dans la grille prennent toute la largeur */
     .hero-grid > div {
-        width: 100% !important;
+        width: 100% ;
         max-width: 100%;
     }
 
@@ -4096,5 +4097,38 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         flex-direction: column;
         padding: 15px;
     }
+} 
+    .quick-actions, .services-bar, .action-grid {
+        display: flex !important;
+        flex-direction: column !important; /* Empile les boutons */
+        gap: 10px !important;
+        padding: 15px !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+        background: white; /* Optionnel : pour bien détacher la barre du fond */
+        border-radius: 12px;
+        box-shadow: var(--shadow-md);
+    }
+
+    .quick-actions a, .action-item, .service-item {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important; 
+        padding: 12px 20px !important;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    .quick-actions i, .action-item i {
+        margin-right: 15px !important;
+        font-size: 20px;
+        width: 30px;
+        text-align: center;
+    }
+    .quick-actions a:last-child {
+        border-bottom: none;
+    }
 }
-}
+
