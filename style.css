@@ -3997,12 +3997,6 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         font-size: 12px;
     }
 
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
     .nav-links {
         flex-direction: column;
         width: 100%;
@@ -4067,15 +4061,40 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
         justify-content: center;
         font-size: 11px;
     }
-}
 
-/* --- AJUSTEMENT SPÉCIFIQUE TRÈS PETITS ÉCRANS (< 480px) --- */
-@media screen and (max-width: 480px) {
     .hero-content h1 {
-        font-size: 22px !important;
+        font-size: 22px ;
     }
     
-    .logo {
-        font-size: 20px !important;
+@media screen and (max-width: 768px) {
+    
+    /* 1. On passe la grille hero en vertical */
+    .hero-grid {
+        display: flex !important;
+        flex-direction: column !important; /* Empile les éléments verticalement */
+        gap: 20px;
+        padding: 20px 15px;
+        text-align: center; /* Centre le texte pour un meilleur look mobile */
     }
+
+    /* 2. On ajuste la taille du logo (texte) qui était trop large */
+    .logo {
+        font-size: 20px !important; /* On réduit la taille pour qu'il tienne sur une ligne */
+        display: inline-block;
+        margin-bottom: 15px;
+        white-space: nowrap; /* Empêche le nom de se couper */
+    }
+
+    /* 3. On s'assure que les images ou contenus dans la grille prennent toute la largeur */
+    .hero-grid > div {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* 4. Ajustement de la navbar pour accompagner le changement */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+}
 }
