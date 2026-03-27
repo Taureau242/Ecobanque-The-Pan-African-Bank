@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobank — Lancement d'alerte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="alert-page">
+
+<nav class="navbar">
+    <a href="index.html" class="logo" style="text-decoration:none; font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:white;">
+        ECO<span style="color:var(--eco-yellow)">BANK</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home" style="margin-right:5px"></i>Accueil</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Lancement_d_alerte.html" style="color:var(--eco-yellow)">
+            <i class="fas fa-bell" style="margin-right:5px"></i>Alerte
+        </a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Hero Alerte -->
+    <div class="alert-hero">
+        <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
+        <h1>Lancement d'alerte</h1>
+        <p>Vous avez été témoin d'une fraude, d'une irrégularité ou d'un acte contraire à l'éthique ? Signalez-le en toute confidentialité. Votre signalement est protégé.</p>
+    </div>
+
+    <!-- Bandeau protection -->
+    <div style="background:white; padding:20px 24px; display:flex; justify-content:center; gap:40px; flex-wrap:wrap; border-bottom:1px solid #e8eff4; position:relative; z-index:3; margin-top:-20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:var(--text-mid);">
+            <i class="fas fa-shield-alt" style="color:var(--eco-turquoise); font-size:22px;"></i>
+            <span><strong style="color:var(--text-dark)">100% Confidentiel</strong><br>Votre identité est protégée</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:var(--text-mid);">
+            <i class="fas fa-lock" style="color:var(--eco-blue-dark); font-size:22px;"></i>
+            <span><strong style="color:var(--text-dark)">Données chiffrées</strong><br>Transmission sécurisée SSL</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:var(--text-mid);">
+            <i class="fas fa-user-secret" style="color:#c0392b; font-size:22px;"></i>
+            <span><strong style="color:var(--text-dark)">Anonymat possible</strong><br>Signalement sans identification</span>
+        </div>
+    </div>
+
+    <!-- Formulaire alerte -->
+    <div class="alert-section">
+        <h2 style="font-family:var(--font-display); font-size:26px; color:var(--eco-blue-dark); margin-bottom:8px;">
+            <i class="fas fa-file-alt" style="color:#c0392b; margin-right:10px;"></i>Votre signalement
+        </h2>
+        <p style="color:var(--text-mid); font-size:14px; margin-bottom:32px;">
+            Tous les champs marqués d'un * sont requis. Vous pouvez rester anonyme.
+        </p>
+
+        <form onsubmit="handleAlert(event)">
+            <!-- Type d'alerte -->
+            <div class="form-group">
+                <label>Type d'alerte *</label>
+                <select class="form-field" required style="appearance:none; background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 10 5%22><path fill=%22%23666%22 d=%22M0 0l5 5 5-5z%22/></svg>'); background-repeat:no-repeat; background-position:right 14px center; padding-right:40px;">
+                    <option value="" disabled selected>Sélectionnez le type</option>
+                    <option>Fraude financière</option>
+                    <option>Corruption / Pot-de-vin</option>
+                    <option>Harcèlement au travail</option>
+                    <option>Blanchiment d'argent</option>
+                    <option>Violation de données</option>
+                    <option>Conflit d'intérêts</option>
+                    <option>Violation des droits des clients</option>
+                    <option>Autre irrégularité</option>
+                </select>
+            </div>
+
+            <!-- Gravité -->
+            <div class="form-group">
+                <label>Niveau de gravité estimé</label>
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+                    <label style="display:flex; align-items:center; gap:8px; font-size:13px; cursor:pointer; padding:10px 16px; border:2px solid #e2eaf0; border-radius:6px; transition:var(--transition);" onclick="selectGravity(this, 'faible')">
+                        <input type="radio" name="gravity" value="faible" style="display:none;"> 
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--eco-yellow);"></span> Faible
+                    </label>
+                    <label style="display:flex; align-items:center; gap:8px; font-size:13px; cursor:pointer; padding:10px 16px; border:2px solid #e2eaf0; border-radius:6px; transition:var(--transition);" onclick="selectGravity(this, 'moyen')">
+                        <input type="radio" name="gravity" value="moyen" style="display:none;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--eco-orange);"></span> Modéré
+                    </label>
+                    <label style="display:flex; align-items:center; gap:8px; font-size:13px; cursor:pointer; padding:10px 16px; border:2px solid #e2eaf0; border-radius:6px; transition:var(--transition);" onclick="selectGravity(this, 'grave')">
+                        <input type="radio" name="gravity" value="grave" style="display:none;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--eco-red);"></span> Grave
+                    </label>
+                    <label style="display:flex; align-items:center; gap:8px; font-size:13px; cursor:pointer; padding:10px 16px; border:2px solid #e2eaf0; border-radius:6px; transition:var(--transition);" onclick="selectGravity(this, 'critique')">
+                        <input type="radio" name="gravity" value="critique" style="display:none;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#7b0000;"></span> Critique
+                    </label>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label>Description des faits *</label>
+                <textarea class="form-field" placeholder="Décrivez les faits de manière précise : quand, où, qui, comment..." required style="min-height:160px;"></textarea>
+            </div>
+
+            <!-- Date/lieu -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                <div class="form-group">
+                    <label>Date estimée des faits</label>
+                    <input type="date" class="form-field">
+                </div>
+                <div class="form-group">
+                    <label>Lieu / Agence concernée</label>
+                    <input type="text" class="form-field" placeholder="Ex: Agence Plateau, Dakar">
+                </div>
+            </div>
+
+            <!-- Anonymat -->
+            <div style="background:var(--bg-gray); border-radius:8px; padding:20px; margin-bottom:24px; border-left:4px solid var(--eco-turquoise);">
+                <p style="font-size:14px; font-weight:600; color:var(--eco-blue-dark); margin-bottom:16px;">
+                    <i class="fas fa-user-secret" style="margin-right:8px;"></i>Voulez-vous rester anonyme ?
+                </p>
+                <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                    <label style="display:flex; align-items:center; gap:8px; font-size:13px; cursor:pointer;">
+                        <input type="radio" name="anonymat" value="oui" checked style="accent-color:var(--eco-turquoise);">
+                        Oui, je reste anonyme
+                    </label>
+                    <label style="display:flex; align-items:center; gap:8px; font-size:13px; cursor:pointer;" onclick="showIdentity()">
+                        <input type="radio" name="anonymat" value="non" style="accent-color:var(--eco-blue-dark);">
+                        Non, me faire identifier
+                    </label>
+                </div>
+                <div id="identityFields" style="display:none; margin-top:20px; padding-top:16px; border-top:1px solid #dde;">
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label>Votre nom complet</label>
+                            <input type="text" class="form-field" placeholder="Nom et Prénom">
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label>Votre e-mail</label>
+                            <input type="email" class="form-field" placeholder="contact@email.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" id="alertBtn" style="width:100%; padding:16px; background:linear-gradient(135deg, #c0392b, #e74c3c); color:white; border:none; border-radius:6px; font-size:16px; font-weight:700; font-family:var(--font-main); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; transition:var(--transition);">
+                <i class="fas fa-paper-plane"></i> Soumettre l'alerte de manière sécurisée
+            </button>
+
+            <p style="text-align:center; font-size:12px; color:var(--text-light); margin-top:16px;">
+                <i class="fas fa-shield-alt" style="margin-right:4px;"></i>
+                Votre signalement est transmis directement au Responsable Conformité d'Ecobank
+            </p>
+        </form>
+    </div>
+</main>
+
+<footer style="background:#001f2e; color:rgba(255,255,255,0.5); text-align:center; padding:24px; font-size:13px;">
+    © 2026 Ecobank Group — Protection des lanceurs d'alerte garantie
+</footer>
+<script src="style.css"></script>
+</body>
+</html>

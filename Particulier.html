@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobank — Particuliers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <a href="index.html" class="logo" style="text-decoration:none; font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:white;">ECO<span style="color:var(--eco-yellow)">BANK</span></a>
+    <ul class="nav-links">
+        <li><a href="Acceuil.html"><i class="fas fa-home" style="margin-right:5px"></i>Accueil</a></li>
+        <li><a href="Particulier.html" style="color:var(--eco-yellow)">Particuliers</a></li>
+        <li><a href="Entreprises.html">Entreprises</a></li>
+        <li><a href="Banque_d_investissement.html">Banque d'Investissement</a></li>
+        <li><a href="Le_groupe.html">Le Groupe</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+            <a href="connexion.html" style="background:var(--eco-yellow); color:var(--eco-blue-dark); padding:8px 18px; border-radius:30px; font-weight:700;">
+                <i class="fas fa-key" style="margin-right:5px;"></i>Connexion
+            </a>
+        </li>
+    </ul>
+</nav>
+</header>
+<main>
+    <!-- Hero Particuliers -->
+    <section style="background:linear-gradient(135deg,var(--eco-blue-dark) 0%,var(--eco-blue-mid) 60%,var(--eco-turquoise) 100%); padding:80px 24px; position:relative; overflow:hidden; animation: fadeIn 0.7s ease both;">
+        <div style="position:absolute; top:-100px; right:-100px; width:400px; height:400px; border-radius:50%; background:rgba(154,197,23,0.1); animation: float 8s ease-in-out infinite;"></div>
+        <div style="position:absolute; bottom:-80px; left:50px; width:280px; height:280px; border-radius:50%; background:rgba(0,161,156,0.1); animation: float 11s ease-in-out infinite reverse;"></div>
+        <div style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; position:relative; z-index:2;" id="hero-grid">
+            <div style="animation: slideInLeft 0.8s ease both;">
+                <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.12); padding:6px 14px; border-radius:20px; margin-bottom:20px; font-size:12px; font-weight:600; color:rgba(255,255,255,0.9); text-transform:uppercase; letter-spacing:1px;">
+                    <i class="fas fa-user"></i> Espace Particuliers
+                </div>
+                <h1 style="font-family:'Playfair Display',serif; font-size:44px; color:white; line-height:1.15; margin-bottom:16px;">
+                    Vos finances,<br>vos <span style="color:var(--eco-yellow)">ambitions</span>
+                </h1>
+                <p style="color:rgba(255,255,255,0.82); font-size:16px; line-height:1.7; margin-bottom:28px;">
+                    Ecobank vous accompagne à chaque étape de votre vie financière. Des services simples, digitaux et accessibles depuis partout en Afrique.
+                </p>
+                <div style="display:flex; gap:14px; flex-wrap:wrap;">
+                    <a href="connexion.html" class="btn btn-yellow" style="width:auto; padding:13px 24px; text-decoration:none; border-radius:30px;">
+                        <i class="fas fa-plus-circle"></i> Ouvrir un compte
+                    </a>
+                    <a href="#services" class="btn" style="width:auto; padding:13px 24px; text-decoration:none; border-radius:30px; background:rgba(255,255,255,0.15); color:white; border:1px solid rgba(255,255,255,0.3);">
+                        <i class="fas fa-list"></i> Nos services
+                    </a>
+                </div>
+            </div>
+            <div style="animation: slideInRight 0.8s ease both;">
+                <!-- Carte bancaire stylisée -->
+                <div style="background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05)); border:1px solid rgba(255,255,255,0.2); border-radius:16px; padding:28px; backdrop-filter:blur(10px); position:relative; overflow:hidden;">
+                    <div style="position:absolute; top:-20px; right:-20px; width:100px; height:100px; border-radius:50%; background:rgba(154,197,23,0.2);"></div>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:32px;">
+                        <div style="font-family:'Playfair Display',serif; font-size:20px; color:white; font-weight:700;">ECO<span style="color:var(--eco-yellow)">BANK</span></div>
+                        <div style="font-size:28px; color:rgba(255,255,255,0.9);"><i class="fas fa-wifi" style="transform:rotate(90deg)"></i></div>
+                    </div>
+                    <div style="font-family:'Courier New',monospace; font-size:18px; color:rgba(255,255,255,0.8); letter-spacing:3px; margin-bottom:24px;">**** **** **** 4729</div>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+                        <div>
+                            <div style="font-size:10px; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Titulaire</div>
+                            <div style="color:white; font-size:14px; font-weight:600;">Jean Dupont</div>
+                        </div>
+                        <div>
+                            <div style="font-size:10px; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Expire</div>
+                            <div style="color:white; font-size:14px; font-weight:600;">12/28</div>
+                        </div>
+                        <div style="font-size:32px; color:rgba(255,255,255,0.6);">
+                            <i class="fab fa-cc-mastercard"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-band">
+        <div class="stats-grid">
+            <div class="stat-item"><span class="num">0 FCFA</span><span class="label">Frais d'ouverture de compte</span></div>
+            <div class="stat-item"><span class="num">24/7</span><span class="label">Service client disponible</span></div>
+            <div class="stat-item"><span class="num">3 min</span><span class="label">Pour ouvrir un compte en ligne</span></div>
+            <div class="stat-item"><span class="num">33</span><span class="label">Pays où utiliser votre carte</span></div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" style="padding:80px 24px; background:var(--bg-gray);">
+        <div style="text-align:center; max-width:700px; margin:0 auto 56px;">
+            <h2 style="font-family:'Playfair Display',serif; font-size:36px; color:var(--eco-blue-dark); margin-bottom:12px;">Nos services pour vous</h2>
+            <p style="color:var(--text-mid); font-size:16px;">Des solutions pensées pour simplifier votre quotidien financier</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-piggy-bank icon"></i>
+                <h3>Compte d'épargne</h3>
+                <p>Épargnez intelligemment avec nos comptes rémunérés. Taux avantageux, accès libre à tout moment.</p>
+                <a href="#" style="color:var(--eco-blue-mid); font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-top:12px; transition:var(--transition);">Découvrir <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card stagger-2">
+                <i class="fas fa-home icon"></i>
+                <h3>Prêt immobilier</h3>
+                <p>Concrétisez votre rêve de propriété avec nos prêts immobiliers à taux compétitifs sur toute la durée.</p>
+                <a href="#" style="color:var(--eco-blue-mid); font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-top:12px; transition:var(--transition);">Découvrir <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card stagger-3">
+                <i class="fas fa-mobile-alt icon"></i>
+                <h3>EcobankPay</h3>
+                <p>Payez, transférez et recevez de l'argent instantanément via votre mobile, partout en Afrique.</p>
+                <a href="#" style="color:var(--eco-blue-mid); font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-top:12px; transition:var(--transition);">Télécharger <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card stagger-2">
+                <i class="fas fa-credit-card icon"></i>
+                <h3>Carte Visa/Mastercard</h3>
+                <p>Carte de débit ou crédit acceptée dans plus de 180 pays et sur tous les sites e-commerce.</p>
+                <a href="#" style="color:var(--eco-blue-mid); font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-top:12px; transition:var(--transition);">Découvrir <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card stagger-3">
+                <i class="fas fa-globe-africa icon"></i>
+                <h3>Transferts Africa</h3>
+                <p>Envoyez de l'argent dans 33 pays africains avec des frais réduits et une vitesse inégalée.</p>
+                <a href="#" style="color:var(--eco-blue-mid); font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-top:12px; transition:var(--transition);">Découvrir <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card stagger-4">
+                <i class="fas fa-car icon"></i>
+                <h3>Crédit auto</h3>
+                <p>Financez votre véhicule avec des mensualités adaptées à votre budget et une approbation rapide.</p>
+                <a href="#" style="color:var(--eco-blue-mid); font-size:13px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px; margin-top:12px; transition:var(--transition);">Découvrir <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA OUVRIR UN COMPTE -->
+    <section style="background:white; padding:60px 24px;">
+        <div style="max-width:800px; margin:0 auto; background:linear-gradient(135deg,var(--eco-blue-dark),var(--eco-turquoise)); border-radius:var(--radius-lg); padding:48px; text-align:center; position:relative; overflow:hidden;">
+            <div style="position:absolute; inset:0; background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.02) 40px,rgba(255,255,255,0.02) 80px);"></div>
+            <div style="position:relative; z-index:2;">
+                <h2 style="font-family:'Playfair Display',serif; font-size:34px; color:white; margin-bottom:12px;">Rejoignez Ecobank aujourd'hui</h2>
+                <p style="color:rgba(255,255,255,0.82); font-size:15px; margin-bottom:28px; line-height:1.65;">Ouvrez votre compte en 3 minutes depuis votre téléphone. Aucun frais d'ouverture.</p>
+                <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+                    <a href="connexion.html" class="btn btn-yellow" style="width:auto; padding:14px 28px; text-decoration:none; border-radius:30px; font-size:15px;">
+                        <i class="fas fa-rocket"></i> Ouvrir mon compte
+                    </a>
+                    <a href="contact.html" class="btn" style="width:auto; padding:14px 28px; text-decoration:none; border-radius:30px; background:rgba(255,255,255,0.15); color:white; border:1px solid rgba(255,255,255,0.3); font-size:15px;">
+                        <i class="fas fa-question-circle"></i> Poser une question
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+ <!-- Footer -->
+<footer style="background:#001f2e; color:rgba(255,255,255,0.5); text-align:center; padding:28px; font-size:13px;">
+    <div style="margin-bottom:12px;">
+        <a href="index.html" style="color:rgba(255,255,255,0.5); text-decoration:none; margin:0 12px;">Accueil</a>
+        <a href="contact.html" style="color:rgba(255,255,255,0.5); text-decoration:none; margin:0 12px;">Contact</a>
+        <a href="Le_groupe.html" style="color:rgba(255,255,255,0.5); text-decoration:none; margin:0 12px;">Le Groupe</a>
+        <a href="connexion.html" style="color:rgba(255,255,255,0.5); text-decoration:none; margin:0 12px;">Connexion</a>
+    </div>
+    © 2026 Ecobank Group — Tous droits réservés
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

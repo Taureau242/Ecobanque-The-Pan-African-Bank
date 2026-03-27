@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecobank – La Banque Panafricaine</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="c:\Users\Akouala Ndalla\Downloads\script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<!-- header -->
+
+<body>
+
+  <header>
+
+  <nav class="navbar">
+    <a href="Acceuil.html" class="logo" style="text-decoration:none; font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:white;">ECO<span style="color:var(--eco-yellow)">BANK</span></a>
+    <ul class="nav-links">
+        <li><a href="Acceuil.html"><i class="fas fa-home" style="margin-right:5px"></i>Accueil</a></li>
+        <li><a href="Particulier.html">Particuliers</a></li>
+        <li><a href="Entreprises.html">Entreprises</a></li>
+        <li><a href="Banque_d_investissement.html">Banque d'Investissement</a></li>
+        <li><a href="Le_groupe.html">Le Groupe</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+            <a href="connexion.html" class="btn-login" style="padding:8px 16px; font-size:14px; border-radius:4px; background:var(--eco-yellow); color:var(--eco-blue-dark); font-weight:600; transition:var(--transition);">
+                <i class="fas fa-sign-in-alt" style="margin-right:6px"></i>Connexion
+            </a>
+        </li>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ===== PAGES CONTAINER ===== -->
+<main id="app">
+
+  <!-- ===================== PAGE: HOME ===================== -->
+  <div class="page active" id="page-home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-slider" id="hero-slider">
+        <div class="slide active">
+          <div class="slide-bg" style="background: linear-gradient(135deg, #00592d 0%, #003d20 50%, #001a0e 100%)"></div>
+          <div class="slide-content container">
+            <div class="slide-text">
+              <span class="slide-tag">Banque Panafricaine</span>
+              <h1>Votre avenir financier commence ici</h1>
+              <p>Avec Ecobank, profitez de services bancaires modernes présents dans 35 pays africains.</p>
+              <div class="slide-actions">
+                <a href="#" class="btn btn-primary btn-lg" data-page="personal">Ouvrir un Compte</a>
+                <a href="#" class="btn btn-ghost btn-lg" data-page="about">En Savoir Plus</a>
+              </div>
+            </div>
+
+
+
+
+            <div class="slide-visual">
+              <div class="phone-mockup">
+                <div class="phone-screen">
+                  <div class="app-header">
+                    <span>Ecobank Mobile</span>
+                    <i class="fas fa-bell"></i>
+                  </div>
+
+
+                  <div class="app-balance">
+                    <p>Solde disponible</p>
+                    <h2>1 250 000 <span>FCFA</span></h2>
+                  </div>
+                  <div class="app-actions">
+                    <div class="app-action"><i class="fas fa-paper-plane"></i><span>Envoyer</span></div>
+                    <div class="app-action"><i class="fas fa-download"></i><span>Recevoir</span></div>
+                    <div class="app-action"><i class="fas fa-exchange-alt"></i><span>Échanger</span></div>
+                    <div class="app-action"><i class="fas fa-ellipsis-h"></i><span>Plus</span></div>
+                  </div>
+
+
+                  <div class="app-transactions">
+                    <p class="trans-title">Transactions récentes</p>
+                    <div class="trans-item"><i class="fas fa-shopping-cart"></i><span>Achat en ligne</span><b>-15 000</b></div>
+                    <div class="trans-item"><i class="fas fa-arrow-down"></i><span>Virement reçu</span><b class="pos">+250 000</b></div>
+                    <div class="trans-item"><i class="fas fa-bolt"></i><span>Facture électricité</span><b>-8 500</b></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="slide">
+          <div class="slide-bg" style="background: linear-gradient(135deg, #1a4a8a 0%, #0d2d5e 50%, #060f24 100%)"></div>
+          <div class="slide-content container">
+            <div class="slide-text">
+              <span class="slide-tag">Solutions Entreprises</span>
+              <h1>Financez vos ambitions professionnelles</h1>
+              <p>Des solutions de financement adaptées aux PME et grandes entreprises africaines.</p>
+              <div class="slide-actions">
+                <a href="#" class="btn btn-primary btn-lg" data-page="business">Solutions Entreprises</a>
+                <a href="#" class="btn btn-ghost btn-lg">Contacter un conseiller</a>
+              </div>
+            </div>
+
+
+
+            <div class="slide-visual">
+              <div class="stats-card">
+                <h3>Ecobank en chiffres</h3>
+                <div class="stat-item"><span class="stat-num">35</span><span class="stat-label">Pays africains</span></div>
+                <div class="stat-item"><span class="stat-num">600+</span><span class="stat-label">Agences</span></div>
+                <div class="stat-item"><span class="stat-num">30M+</span><span class="stat-label">Clients</span></div>
+                <div class="stat-item"><span class="stat-num">1985</span><span class="stat-label">Fondation</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="slide">
+          <div class="slide-bg" style="background: linear-gradient(135deg, #8B1A1A 0%, #5c1010 50%, #210505 100%)"></div>
+          <div class="slide-content container">
+            <div class="slide-text">
+              <span class="slide-tag">Ecobank Xpress</span>
+              <h1>Banquez partout, en tout temps</h1>
+              <p>Ecobank Xpress vous permet d'effectuer toutes vos opérations bancaires sans agence.</p>
+              <div class="slide-actions">
+                <a href="#" class="btn btn-primary btn-lg" data-page="ecobank-xpress">Découvrir Xpress</a>
+                <a href="#" class="btn btn-ghost btn-lg">Télécharger l'app</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="hero-controls">
+        <button class="slide-prev" id="slide-prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="slide-dots" id="slide-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="slide-next" id="slide-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- QUICK SERVICES -->
+
+
+    <section class="quick-services">
+
+
+      <div class="container">
+        <div class="qs-grid">
+          <a href="#" class="qs-card" data-page="personal">
+            <div class="qs-icon"><i class="fas fa-user"></i></div>
+            <h4>Particuliers</h4>
+            <p>Comptes, cartes, épargne</p>
+            <span class="qs-arrow"><i class="fas fa-arrow-right"></i></span></a>
+          <a href="#" class="qs-card" data-page="business">
+            <div class="qs-icon"><i class="fas fa-briefcase"></i></div>
+
+
+            <h4>Entreprises</h4>
+            <p>PME, grandes structures</p>
+            <span class="qs-arrow"><i class="fas fa-arrow-right"></i></span></a>
+          <a href="#" class="qs-card" data-page="ecobank-xpress">
+            <div class="qs-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h4>Ecobank Xpress</h4>
+            <p>Mobile & digital banking</p>
+            <span class="qs-arrow"><i class="fas fa-arrow-right"></i></span></a>
+          <a href="#" class="qs-card" data-page="invest">
+            <div class="qs-icon"><i class="fas fa-chart-line"></i></div>
+
+
+
+
+
+            <h4>Investissements</h4>
+            <p>Placements & marchés</p>
+            <span class="qs-arrow"><i class="fas fa-arrow-right"></i></span></a>
+          <a href="#" class="qs-card" data-page="branch-locator">
+            <div class="qs-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Nos Agences</h4>
+            <p>Trouvez votre agence</p>
+            <span class="qs-arrow"><i class="fas fa-arrow-right"></i></span></a>
+        </div>
+      </div>
+    </section>
+
+   
+   
+   
+   
+    <!-- PRODUCTS SECTION -->
+    
+    
+    <section class="products-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Nos Services</span>
+          <h2>Des solutions pour chaque besoin</h2>
+          <p>Découvrez une gamme complète de produits bancaires adaptés à votre situation</p>
+        </div>
+        
+        
+        
+        <div class="products-tabs">
+          <button class="tab-btn active" data-tab="particuliers">Particuliers</button>
+          <button class="tab-btn" data-tab="entreprises">Entreprises</button>
+          <button class="tab-btn" data-tab="investissement">Investissement</button>
+        </div>
+       
+       
+       
+        <div class="tab-content active" id="tab-particuliers">
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-icon"><i class="fas fa-credit-card"></i></div>
+              <h3>Carte Ecobank</h3>
+              <p>Carte Visa/Mastercard pour paiements locaux et internationaux en toute sécurité.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Sans frais mensuels</li>
+                <li><i class="fas fa-check"></i> Paiement contactless</li>
+                <li><i class="fas fa-check"></i> Alertes SMS gratuites</li>
+              </ul>
+              <a href="#" class="btn btn-outline-green" data-page="personal">En savoir plus</a>
+            </div>
+
+
+
+
+
+            <div class="product-card featured">
+              <div class="featured-badge">Populaire</div>
+              <div class="product-icon"><i class="fas fa-piggy-bank"></i></div>
+              <h3>Compte Épargne Plus</h3>
+              <p>Faites fructifier votre argent avec notre compte épargne à taux avantageux.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Taux jusqu'à 4,5% / an</li>
+                <li><i class="fas fa-check"></i> Capital garanti</li>
+                <li><i class="fas fa-check"></i> Retraits flexibles</li>
+              </ul>
+              <a href="#" class="btn btn-primary" data-page="personal">Ouvrir maintenant</a>
+            </div>
+
+
+
+
+            <div class="product-card">
+              <div class="product-icon"><i class="fas fa-home"></i></div>
+              <h3>Crédit Immobilier</h3>
+              <p>Réalisez votre projet immobilier avec notre crédit adapté à votre capacité.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Durée jusqu'à 20 ans</li>
+                <li><i class="fas fa-check"></i> Taux compétitifs</li>
+                <li><i class="fas fa-check"></i> Réponse rapide</li>
+              </ul>
+              <a href="#" class="btn btn-outline-green" data-page="personal">Simuler un prêt</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="tab-content" id="tab-entreprises">
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-icon"><i class="fas fa-store"></i></div>
+              <h3>Compte PME</h3>
+              <p>Un compte professionnel complet pour les petites et moyennes entreprises.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Gestion de trésorerie</li>
+                <li><i class="fas fa-check"></i> Virements B2B</li>
+                <li><i class="fas fa-check"></i> Reporting détaillé</li>
+              </ul>
+              <a href="#" class="btn btn-outline-green" data-page="business">En savoir plus</a>
+            </div>
+
+
+
+
+
+            <div class="product-card featured">
+              <div class="featured-badge">Populaire</div>
+              <div class="product-icon"><i class="fas fa-globe-africa"></i></div>
+              <h3>Commerce International</h3>
+              <p>Solutions de financement du commerce pour vos transactions transfrontalières.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Lettres de crédit</li>
+                <li><i class="fas fa-check"></i> Garanties bancaires</li>
+                <li><i class="fas fa-check"></i> Présence dans 35 pays</li>
+              </ul>
+              <a href="#" class="btn btn-primary" data-page="business">Contacter un expert</a>
+            </div>
+
+
+
+            <div class="product-card">
+              <div class="product-icon"><i class="fas fa-industry"></i></div>
+              <h3>Financement Entreprise</h3>
+              <p>Financez vos projets d'expansion et d'équipement avec nos solutions dédiées.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Prêts à moyen terme</li>
+                <li><i class="fas fa-check"></i> Leasing</li>
+                <li><i class="fas fa-check"></i> Conseil personnalisé</li>
+              </ul>
+              <a href="#" class="btn btn-outline-green" data-page="business">Simuler</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="tab-content" id="tab-investissement">
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-icon"><i class="fas fa-chart-bar"></i></div>
+              <h3>Bons du Trésor</h3>
+              <p>Investissez dans des titres d'État sécurisés avec un rendement attractif.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Capital garanti</li>
+                <li><i class="fas fa-check"></i> Taux fixes</li>
+                <li><i class="fas fa-check"></i> Durée flexible</li>
+              </ul>
+              <a href="#" class="btn btn-outline-green" data-page="invest">Investir</a>
+            </div>
+
+
+
+
+
+            <div class="product-card featured">
+              <div class="featured-badge">Rendement élevé</div>
+              <div class="product-icon"><i class="fas fa-wallet"></i></div>
+              <h3>Fonds Communs</h3>
+              <p>Diversifiez votre portefeuille avec nos fonds de placement gérés par des experts.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Gestion professionnelle</li>
+                <li><i class="fas fa-check"></i> Diversification</li>
+                <li><i class="fas fa-check"></i> Liquidité quotidienne</li>
+              </ul>
+              <a href="#" class="btn btn-primary" data-page="invest">Découvrir</a>
+            </div>
+
+
+
+
+
+            <div class="product-card">
+              <div class="product-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Assurance-Vie</h3>
+              <p>Protégez vos proches et construisez votre patrimoine sur le long terme.</p>
+              <ul>
+                <li><i class="fas fa-check"></i> Protection décès</li>
+                <li><i class="fas fa-check"></i> Épargne long terme</li>
+                <li><i class="fas fa-check"></i> Avantages fiscaux</li>
+              </ul>
+              <a href="#" class="btn btn-outline-green" data-page="invest">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- DIGITAL BANKING -->
+
+
+    <section class="digital-section section">
+      <div class="container">
+        <div class="digital-inner">
+          <div class="digital-content">
+            <span class="section-tag">Banque Digitale</span>
+            <h2>Gérez votre argent depuis votre smartphone</h2>
+            <p>L'application Ecobank Mobile vous offre une expérience bancaire complète, disponible 24h/24 et 7j/7.</p>
+            
+            
+            
+            <div class="digital-features">
+              <div class="digital-feature">
+                <div class="df-icon"><i class="fas fa-exchange-alt"></i></div>
+                <div>
+                  <h4>Transferts instantanés</h4>
+                  <p>Envoyez de l'argent en quelques secondes dans toute l'Afrique</p>
+                </div>
+              </div>
+              <div class="digital-feature">
+                <div class="df-icon"><i class="fas fa-chart-line"></i></div>
+                <div>
+
+
+
+
+
+                  <h4>Suivi en temps réel</h4>
+                  <p>Consultez vos soldes et transactions à tout moment</p>
+                </div>
+              </div>
+              <div class="digital-feature">
+                <div class="df-icon"><i class="fas fa-lock"></i></div>
+                <div>
+                  <h4>Sécurité renforcée</h4>
+                  <p>Authentification biométrique et chiffrement de bout en bout</p>
+                </div>
+              </div>
+
+              <div class="digital-feature">
+                <div class="df-icon"><i class="fas fa-headset"></i></div>
+                <div>
+
+
+
+                  <h4>Support 24/7</h4>
+                  <p>Un conseiller disponible à tout moment via l'application</p>
+                </div>
+              </div>
+            </div>
+            <div class="app-download">
+              <a href="#" class="store-btn">
+                <i class="fab fa-apple"></i>
+                <div><small>Télécharger sur</small><strong>App Store</strong></div>
+              </a>
+              <a href="#" class="store-btn">
+                <i class="fab fa-google-play"></i>
+                <div><small>Disponible sur</small><strong>Google Play</strong></div>
+              </a>
+            </div>
+          </div>
+
+
+
+          <div class="digital-image">
+            <div class="phones-group">
+              <div class="phone-big">
+                <div class="phone-notch"></div>
+                <div class="phone-screen-big">
+                  <div class="screen-card green">
+                    <small>Solde principal</small>
+                    <h3>2 450 000 FCFA</h3>
+                    <p>**** **** **** 4521</p>
+                  </div>
+
+
+
+                  <div class="screen-stats">
+                    <div><i class="fas fa-arrow-up"></i> <span>Dépenses<br/><b>185 000</b></span></div>
+                    <div><i class="fas fa-arrow-down pos"></i> <span>Revenus<br/><b>850 000</b></span></div>
+                  </div>
+
+
+                  <div class="screen-chart">
+                    <div class="bar" style="height:60%"></div>
+                    <div class="bar" style="height:80%"></div>
+                    <div class="bar" style="height:45%"></div>
+                    <div class="bar" style="height:90%"></div>
+                    <div class="bar" style="height:70%"></div>
+                    <div class="bar high" style="height:100%"></div>
+                    <div class="bar" style="height:75%"></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="phone-small">
+                <div class="phone-screen-small">
+                  <div class="notif-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Virement reçu +50 000 FCFA</span>
+                  </div>
+                  <div class="quick-send">
+                    <p>Envoi rapide</p>
+                    <div class="contacts">
+                      <div class="contact-avatar">AB</div>
+                      <div class="contact-avatar">JD</div>
+                      <div class="contact-avatar">MK</div>
+                      <div class="contact-avatar add"><i class="fas fa-plus"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- STATS -->
+
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-globe-africa"></i></div>
+            <div class="stat-number" data-target="35">0</div>
+            <div class="stat-suffix">pays</div>
+            <p>Présence panafricaine</p>
+          </div>
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-number" data-target="30">0</div>
+            <div class="stat-suffix">M+</div>
+            <p>Clients actifs</p>
+          </div>
+
+
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-building"></i></div>
+            <div class="stat-number" data-target="600">0</div>
+            <div class="stat-suffix">+</div>
+            <p>Agences & bureaux</p>
+          </div>
+
+
+
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-history"></i></div>
+            <div class="stat-number" data-target="40">0</div>
+            <div class="stat-suffix">ans</div>
+            <p>D'expérience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- NEWS -->
+
+
+    <section class="news-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Actualités</span>
+          <h2>Dernières nouvelles</h2>
+          <p>Restez informé des dernières actualités d'Ecobank</p>
+        </div>
+
+
+
+        <div class="news-grid">
+          <div class="news-card featured-news">
+            <div class="news-img" style="background: linear-gradient(135deg, #00592d, #003d20)">
+              <span class="news-category">Innovation</span>
+            </div>
+
+
+            <div class="news-body">
+              <span class="news-date"><i class="far fa-calendar"></i> 15 Mars 2025</span>
+              <h3>Ecobank lance son nouveau service de paiement panafricain instantané</h3>
+              <p>Ecobank renforce sa position de leader en lançant un nouveau système de transfert transfrontalier en temps réel disponible dans ses 35 pays d'opérations.</p>
+              <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+
+
+        
+          <div class="news-side">
+            <div class="news-card small">
+              <div class="news-img-small" style="background: linear-gradient(135deg, #1a4a8a, #0d2d5e)">
+                <span class="news-category">Finance</span>
+              </div>
+              <div class="news-body">
+                <span class="news-date"><i class="far fa-calendar"></i> 8 Mars 2025</span>
+                <h4>Ecobank et XTransfer s'associent pour faciliter le commerce Afrique-Chine</h4>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="news-card small">
+              <div class="news-img-small" style="background: linear-gradient(135deg, #d4a800, #8a6c00)">
+                <span class="news-category">RSE</span>
+              </div>
+              <div class="news-body">
+                <span class="news-date"><i class="far fa-calendar"></i> 1 Mars 2025</span>
+                <h4>Ecobank Côte d'Ivoire lance la première obligation genre d'Afrique de l'Ouest</h4>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="news-card small">
+              <div class="news-img-small" style="background: linear-gradient(135deg, #6b2f8a, #3d1a52)">
+                <span class="news-category">Technologie</span>
+              </div>
+              <div class="news-body">
+                <span class="news-date"><i class="far fa-calendar"></i> 22 Fév 2025</span>
+                <h4>Ecobank intègre l'IA pour améliorer l'expérience client sur mobile</h4>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS (UX IMPROVEMENT #1) -->
+    <section class="testimonials-section section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Témoignages</span>
+          <h2>Ce que nos clients disent</h2>
+        </div>
+        <div class="testimonials-slider" id="testimonials-slider">
+          <div class="testimonial active">
+            <div class="stars">★★★★★</div>
+            <blockquote>L'application Ecobank Mobile a transformé ma façon de gérer mes finances. Les transferts d'argent vers mes proches dans d'autres pays se font en quelques secondes.</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">AM</div>
+              <div><strong>Aminata Mbaye</strong><span>Cliente depuis 2018 – Dakar, Sénégal</span></div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <blockquote>En tant que chef d'entreprise, Ecobank est mon partenaire financier idéal. Leurs solutions de financement pour les PME sont vraiment adaptées aux réalités africaines.</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">KO</div>
+              <div><strong>Kwame Osei</strong><span>PDG, KO Logistics – Accra, Ghana</span></div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="stars">★★★★☆</div>
+            <blockquote>Le service clientèle d'Ecobank est exceptionnel. Chaque fois que j'ai eu un problème, l'équipe a été réactive et professionnelle. Je recommande vivement.</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">FD</div>
+              <div><strong>Fatou Diallo</strong><span>Cliente depuis 2015 – Abidjan, Côte d'Ivoire</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="test-dots" id="test-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER (UX IMPROVEMENT #2) -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-text">
+            <h2>Prêt à rejoindre la banque panafricaine ?</h2>
+            <p>Ouvrez votre compte en ligne en moins de 10 minutes, sans vous déplacer.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-white btn-lg" data-page="personal">Ouvrir un compte</a>
+            <a href="#" class="btn btn-ghost-white btn-lg" data-page="branch-locator">Trouver une agence</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- end page-home -->
+
+  <!-- ===================== PAGE: PERSONAL ===================== -->
+  <div class="page" id="page-personal">
+    <div class="page-hero" style="background: linear-gradient(135deg, #00592d, #003d20)">
+      <div class="container">
+        <nav class="breadcrumb"><a href="#" data-page="home">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Particuliers</span></nav>
+        <h1>Banque des Particuliers</h1>
+        <p>Des solutions bancaires adaptées à votre vie quotidienne</p>
+      </div>
+    </div>
+    <div class="page-content section container">
+      <div class="service-categories">
+        <div class="service-cat">
+          <div class="cat-header"><i class="fas fa-credit-card"></i><h3>Comptes & Cartes</h3></div>
+          <ul class="cat-list">
+            <li><a href="#">Compte courant</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Compte épargne</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Carte Visa Classic</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Carte Visa Gold</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Carte prépayée</a><i class="fas fa-chevron-right"></i></li>
+          </ul>
+        </div>
+        <div class="service-cat">
+          <div class="cat-header"><i class="fas fa-hand-holding-usd"></i><h3>Prêts & Crédits</h3></div>
+          <ul class="cat-list">
+            <li><a href="#">Prêt personnel</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Crédit immobilier</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Prêt auto</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Crédit scolaire</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Micro-crédit</a><i class="fas fa-chevron-right"></i></li>
+          </ul>
+        </div>
+        <div class="service-cat">
+          <div class="cat-header"><i class="fas fa-exchange-alt"></i><h3>Transferts</h3></div>
+          <ul class="cat-list">
+            <li><a href="#">Transfert national</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Transfert international</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Western Union</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Paiement mobile</a><i class="fas fa-chevron-right"></i></li>
+          </ul>
+        </div>
+        <div class="service-cat">
+          <div class="cat-header"><i class="fas fa-shield-alt"></i><h3>Assurance</h3></div>
+          <ul class="cat-list">
+            <li><a href="#">Assurance-vie</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Assurance auto</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Assurance voyage</a><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Protection carte</a><i class="fas fa-chevron-right"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Loan Calculator (UX IMPROVEMENT #1) -->
+      <div class="calculator-section">
+        <div class="calculator-wrapper">
+          <div class="calc-header">
+            <h2><i class="fas fa-calculator"></i> Simulateur de Prêt</h2>
+            <p>Estimez votre mensualité en quelques secondes</p>
+          </div>
+          <div class="calc-body">
+            <div class="calc-inputs">
+              <div class="calc-field">
+                <label>Montant emprunté (FCFA)</label>
+                <input type="range" id="loan-amount" min="100000" max="50000000" step="100000" value="5000000" />
+                <div class="range-value"><span id="amount-display">5 000 000</span> FCFA</div>
+              </div>
+              <div class="calc-field">
+                <label>Durée (mois)</label>
+                <input type="range" id="loan-duration" min="6" max="240" step="6" value="60" />
+                <div class="range-value"><span id="duration-display">60</span> mois</div>
+              </div>
+              <div class="calc-field">
+                <label>Taux d'intérêt (%)</label>
+                <input type="range" id="loan-rate" min="5" max="20" step="0.5" value="10" />
+                <div class="range-value"><span id="rate-display">10</span>%</div>
+              </div>
+            </div>
+            <div class="calc-result">
+              <div class="result-main">
+                <p>Mensualité estimée</p>
+                <h2 id="monthly-payment">106 235 FCFA</h2>
+              </div>
+              <div class="result-details">
+                <div><span>Coût total</span><b id="total-cost">6 374 100 FCFA</b></div>
+                <div><span>Intérêts totaux</span><b id="total-interest">1 374 100 FCFA</b></div>
+              </div>
+              <a href="#" class="btn btn-primary">Faire une demande</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end page-personal -->
+
+  <!-- ===================== PAGE: BUSINESS ===================== -->
+
+
+  <div class="page" id="page-business">
+    <div class="page-hero" style="background: linear-gradient(135deg, #1a4a8a, #0d2d5e)">
+      <div class="container">
+        <nav class="breadcrumb"><a href="#" data-page="home">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Entreprises</span></nav>
+        <h1>Solutions Entreprises</h1>
+        <p>Des services bancaires sur mesure pour votre croissance</p>
+      </div>
+    </div>
+
+
+    <div class="page-content section container">
+      <div class="business-intro">
+        <div class="business-text">
+          <h2>Votre partenaire pour le développement des affaires en Afrique</h2>
+          <p>Ecobank propose une gamme complète de solutions financières pour accompagner les entreprises de toutes tailles dans leur développement en Afrique et à l'international.</p>
+          <p>Bénéficiez de notre réseau panafricain unique couvrant 35 pays pour faciliter vos transactions transfrontalières et votre commerce international.</p>
+          <a href="#" class="btn btn-primary">Parler à un conseiller entreprise</a>
+        </div>
+
+        <div class="business-stats">
+          <div class="biz-stat"><span>35</span><p>Pays couverts</p></div>
+          <div class="biz-stat"><span>500K+</span><p>Entreprises clientes</p></div>
+          <div class="biz-stat"><span>40</span><p>Ans d'expertise</p></div>
+          <div class="biz-stat"><span>24/7</span><p>Support dédié</p></div>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top: 3rem">
+        <span class="section-tag">Nos offres</span>
+        <h2>Solutions adaptées à votre structure</h2>
+      </div>
+
+
+
+      <div class="business-cards">
+        <div class="biz-card">
+          <div class="biz-icon" style="background: #e8f5ee"><i class="fas fa-store" style="color: #00592d"></i></div>
+          <h3>TPE & PME</h3>
+          <p>Comptes professionnels, financement court terme, gestion de trésorerie et solutions de paiement pour les petites structures.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Compte Pro à ouverture rapide</li>
+            <li><i class="fas fa-check-circle"></i> Terminal de paiement</li>
+            <li><i class="fas fa-check-circle"></i> Ligne de crédit flexible</li>
+            <li><i class="fas fa-check-circle"></i> Gestion de paie</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Découvrir</a>
+        </div>
+
+
+        <div class="biz-card featured-biz">
+          <div class="biz-icon" style="background: #fff3e0"><i class="fas fa-building" style="color: #e65100"></i></div>
+          <h3>Grandes Entreprises</h3>
+          <p>Solutions complètes de cash management, financement structuré et services de marché pour les grandes organisations.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Cash pooling multi-devises</li>
+            <li><i class="fas fa-check-circle"></i> Financement structuré</li>
+            <li><i class="fas fa-check-circle"></i> Conseil en fusion-acquisition</li>
+            <li><i class="fas fa-check-circle"></i> Marchés des capitaux</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Contacter</a>
+        </div>
+
+
+
+        <div class="biz-card">
+          <div class="biz-icon" style="background: #e3f2fd"><i class="fas fa-ship" style="color: #1565c0"></i></div>
+          <h3>Commerce International</h3>
+          <p>Financement du commerce, lettres de crédit, garanties et solutions de change pour vos opérations transfrontalières.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Lettres de crédit</li>
+            <li><i class="fas fa-check-circle"></i> Remises documentaires</li>
+            <li><i class="fas fa-check-circle"></i> Garanties bancaires</li>
+            <li><i class="fas fa-check-circle"></i> Change multi-devises</li>
+          </ul>
+          <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- end page-business -->
+
+  <!-- ===================== PAGE: ECOBANK XPRESS ===================== -->
+
+
+  <div class="page" id="page-ecobank-xpress">
+    <div class="page-hero" style="background: linear-gradient(135deg, #e65100, #bf360c)">
+      <div class="container">
+        <nav class="breadcrumb"><a href="#" data-page="home">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Ecobank Xpress</span></nav>
+        <h1>Ecobank Xpress</h1>
+        <p>La banque mobile sans agence, disponible partout en Afrique</p>
+      </div>
+    </div>
+
+
+    <div class="page-content section container">
+      <div class="xpress-intro">
+        <div class="xpress-text">
+          <h2>Banquez sans compte bancaire traditionnel</h2>
+          <p>Ecobank Xpress révolutionne l'accès aux services financiers en permettant à tous les Africains de bénéficier d'un portefeuille mobile sécurisé, sans nécessiter de compte bancaire classique.</p>
+          <p>Disponible sur simple téléphone, même sans connexion internet, Xpress démocratise la finance en Afrique.</p>
+        </div>
+      </div>
+
+
+
+      <div class="xpress-features">
+        <div class="xpress-feature">
+          <div class="xf-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Compte Mobile Xpress</h3>
+          <p>Créez votre portefeuille mobile en quelques minutes avec juste votre numéro de téléphone et votre pièce d'identité.</p>
+          <span class="xf-tag">Sans agence</span>
+        </div>
+
+
+        <div class="xpress-feature">
+          <div class="xf-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Transferts Instantanés</h3>
+          <p>Envoyez et recevez de l'argent dans toute l'Afrique en quelques secondes via SMS ou l'application.</p>
+          <span class="xf-tag">Disponible 24h/24</span>
+        </div>
+
+
+        <div class="xpress-feature">
+          <div class="xf-icon"><i class="fas fa-store-alt"></i></div>
+          <h3>Réseau d'Agents</h3>
+          <p>Déposez et retirez de l'argent chez l'un de nos milliers d'agents dans toute l'Afrique.</p>
+          <span class="xf-tag">+50 000 agents</span>
+        </div>
+
+
+        <div class="xpress-feature">
+          <div class="xf-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Paiement de Factures</h3>
+          <p>Payez vos factures d'eau, d'électricité, de téléphone directement depuis votre portefeuille mobile.</p>
+          <span class="xf-tag">Tous opérateurs</span>
+        </div>
+
+
+
+        <div class="xpress-feature">
+          <div class="xf-icon"><i class="fas fa-qrcode"></i></div>
+          <h3>Paiement QR Code</h3>
+          <p>Payez vos achats en magasin en scannant simplement un QR code avec votre téléphone.</p>
+          <span class="xf-tag">Paiement sans contact</span>
+        </div>
+
+
+
+        <div class="xpress-feature">
+          <div class="xf-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Épargne Simplifiée</h3>
+          <p>Mettez de l'argent de côté automatiquement avec notre fonctionnalité d'épargne programmée.</p>
+          <span class="xf-tag">Objectifs d'épargne</span>
+        </div>
+      </div>
+
+      <div class="how-it-works">
+        <div class="section-header">
+          <span class="section-tag">Simple & Rapide</span>
+          <h2>Comment ça marche ?</h2>
+        </div>
+
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h4>Téléchargez l'app</h4>
+            <p>Disponible sur App Store et Google Play, ou composez *326# sur votre téléphone</p>
+          </div>
+
+
+          <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h4>Inscrivez-vous</h4>
+            <p>Renseignez vos informations et validez votre identité avec votre pièce d'identité</p>
+          </div>
+
+          <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h4>Alimentez votre compte</h4>
+            <p>Déposez de l'argent chez un agent Ecobank Xpress ou par virement depuis votre banque</p>
+          </div>
+
+
+          <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h4>Banquez librement</h4>
+            <p>Envoyez, recevez, payez et épargnez depuis votre téléphone à tout moment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end page-ecobank-xpress -->
+
+  <!-- ===================== PAGE: INVEST ===================== -->
+  <div class="page" id="page-invest">
+    <div class="page-hero" style="background: linear-gradient(135deg, #4a148c, #2c0c5e)">
+      <div class="container">
+        <nav class="breadcrumb"><a href="#" data-page="home">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Investir</span></nav>
+        <h1>Investissement & Placements</h1>
+        <p>Faites fructifier votre patrimoine avec l'expertise d'Ecobank</p>
+      </div>
+    </div>
+    <div class="page-content section container">
+      <div class="invest-intro">
+        <h2>Bâtissez votre patrimoine avec Ecobank</h2>
+        <p>Nos experts en gestion de patrimoine vous accompagnent pour définir la stratégie d'investissement adaptée à vos objectifs et à votre profil de risque.</p>
+      </div>
+      <div class="invest-products">
+        <div class="invest-card">
+          <div class="invest-icon" style="background:#e8f5ee"><i class="fas fa-landmark" style="color:#00592d"></i></div>
+          <h3>Bons du Trésor</h3>
+          <div class="invest-rate"><span>Rendement</span><b>5 – 7%</b><span>/ an</span></div>
+          <p>Investissez dans des titres d'État souverains garantis, avec des maturités allant de 3 mois à 5 ans.</p>
+          <div class="invest-details">
+            <div><i class="fas fa-lock"></i> Capital garanti</div>
+            <div><i class="fas fa-calendar"></i> Durée: 3 mois – 5 ans</div>
+            <div><i class="fas fa-coins"></i> Minimum: 100 000 FCFA</div>
+          </div>
+          <a href="#" class="btn btn-primary">Investir maintenant</a>
+        </div>
+        <div class="invest-card">
+          <div class="invest-icon" style="background:#fff3e0"><i class="fas fa-chart-pie" style="color:#e65100"></i></div>
+          <h3>OPCVM / Fonds Communs</h3>
+          <div class="invest-rate"><span>Rendement</span><b>8 – 12%</b><span>/ an</span></div>
+          <p>Diversifiez votre portefeuille grâce à des fonds gérés par nos experts en marchés africains et internationaux.</p>
+          <div class="invest-details">
+            <div><i class="fas fa-chart-line"></i> Gestion professionnelle</div>
+            <div><i class="fas fa-calendar"></i> Durée: 1 – 5 ans</div>
+            <div><i class="fas fa-coins"></i> Minimum: 500 000 FCFA</div>
+          </div>
+          <a href="#" class="btn btn-primary">Découvrir</a>
+        </div>
+        <div class="invest-card">
+          <div class="invest-icon" style="background:#e3f2fd"><i class="fas fa-university" style="color:#1565c0"></i></div>
+          <h3>Dépôts à Terme</h3>
+          <div class="invest-rate"><span>Rendement</span><b>4 – 6%</b><span>/ an</span></div>
+          <p>Placez votre épargne sur un compte à terme avec un taux garanti et une durée définie à l'avance.</p>
+          <div class="invest-details">
+            <div><i class="fas fa-lock"></i> Taux garanti fixe</div>
+            <div><i class="fas fa-calendar"></i> Durée: 3 mois – 3 ans</div>
+            <div><i class="fas fa-coins"></i> Minimum: 1 000 000 FCFA</div>
+          </div>
+          <a href="#" class="btn btn-primary">Placer mon argent</a>
+        </div>
+        <div class="invest-card">
+          <div class="invest-icon" style="background:#fce4ec"><i class="fas fa-shield-alt" style="color:#c62828"></i></div>
+          <h3>Assurance-Vie</h3>
+          <div class="invest-rate"><span>Rendement</span><b>6 – 9%</b><span>/ an</span></div>
+          <p>Protégez vos proches et constituez un capital à long terme grâce à nos contrats d'assurance-vie.</p>
+          <div class="invest-details">
+            <div><i class="fas fa-heart"></i> Protection famille</div>
+            <div><i class="fas fa-calendar"></i> Durée: 5 – 20 ans</div>
+            <div><i class="fas fa-coins"></i> Primes: dès 25 000/mois</div>
+          </div>
+          <a href="#" class="btn btn-primary">Souscrire</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- end page-invest -->
+
+  <!-- ===================== PAGE: ABOUT ===================== -->
+
+
+
+  <div class="page" id="page-about">
+    <div class="page-hero" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)">
+      <div class="container">
+        <nav class="breadcrumb"><a href="#" data-page="home">Accueil</a> <i class="fas fa-chevron-right"></i> <span>À propos</span></nav>
+        <h1>À Propos d'Ecobank</h1>
+        <p>La banque panafricaine au service du développement de l'Afrique depuis 1985</p>
+      </div>
+    </div>
+
+
+    <div class="page-content section container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Notre Histoire</h2>
+          <p>Ecobank Transnational Incorporated (ETI) a été fondée en 1985 sous l'initiative du secteur privé africain, avec le soutien de la CEDEAO. Notre mission dès le départ : combler le vide laissé par l'absence de banques commerciales panafricaines appartenant au secteur privé africain.</p>
+          <p>Aujourd'hui, Ecobank est la plus grande banque panafricaine indépendante, présente dans 35 pays d'Afrique subsaharienne, avec un réseau de plus de 600 agences et plus de 30 millions de clients.</p>
+          <p>Notre vision est d'être la banque de choix pour les individus et les entreprises souhaitant bénéficier d'une plateforme financière panafricaine intégrée.</p>
+        </div>
+
+
+
+
+
+        <div class="about-vision">
+          <div class="vision-card">
+            <div class="vision-icon"><i class="fas fa-eye"></i></div>
+            <h3>Notre Vision</h3>
+            <p>Être la banque de choix des Africains et le partenaire privilégié du développement économique du continent.</p>
+          </div>
+          <div class="vision-card">
+            <div class="vision-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Notre Mission</h3>
+            <p>Fournir des services financiers inclusifs, innovants et accessibles qui contribuent à l'émergence économique de l'Afrique.</p>
+          </div>
+          <div class="vision-card">
+            <div class="vision-icon"><i class="fas fa-heart"></i></div>
+            <h3>Nos Valeurs</h3>
+            <p>Excellence, intégrité, esprit d'équipe et innovation au service de nos clients et de l'Afrique.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="timeline">
+        <div class="section-header">
+          <span class="section-tag">Historique</span>
+          <h2>40 ans d'histoire panafricaine</h2>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="tl-year">1985</div>
+            <div class="tl-content"><h4>Fondation</h4><p>Création d'Ecobank Transnational Incorporated au Togo sous l'impulsion de la CEDEAO.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-year">1990</div>
+            <div class="tl-content"><h4>Expansion régionale</h4><p>Ecobank s'étend dans 5 pays d'Afrique de l'Ouest et ouvre ses premières agences internationales.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-year">2000</div>
+            <div class="tl-content"><h4>Cap sur l'Est africain</h4><p>Lancement des opérations en Afrique de l'Est et centrale. La banque couvre désormais 15 pays.</p></div>
+          </div>
+
+
+          <div class="timeline-item">
+            <div class="tl-year">2012</div>
+            <div class="tl-content"><h4>30 pays</h4><p>Ecobank atteint 30 pays de présence et 11 millions de clients. Introduction en bourse à Lagos, Accra et Abidjan.</p></div>
+          </div>
+
+
+          <div class="timeline-item">
+            <div class="tl-year">2018</div>
+            <div class="tl-content"><h4>Révolution digitale</h4><p>Lancement de l'application Ecobank Mobile et d'Ecobank Xpress, banque sans agence accessible à tous.</p></div>
+          </div>
+
+
+          <div class="timeline-item">
+            <div class="tl-year">2025</div>
+            <div class="tl-content"><h4>L'Afrique bancaire</h4><p>35 pays, 30+ millions de clients et leadership sur les paiements instantanés transfrontaliers.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end page-about -->
+
+  <!-- ===================== PAGE: BRANCH LOCATOR ===================== -->
+
+
+  <div class="page" id="page-branch-locator">
+    <div class="page-hero" style="background: linear-gradient(135deg, #00592d, #003d20)">
+      <div class="container">
+        <nav class="breadcrumb"><a href="#" data-page="home">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Nos Agences</span></nav>
+        <h1>Trouvez une Agence</h1>
+        <p>Localisez l'agence Ecobank la plus proche de vous</p>
+      </div>
+    </div>
+    <div class="page-content section container">
+
+
+
+      <!-- Formulaire de recherche d'agence -->
+
+
+      <div class="branch-search">
+        <div class="search-controls">
+          <div class="search-field">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" id="city-search" placeholder="Ville ou quartier..." />
+          </div>
+         
+         
+         
+          <select id="country-select">
+            <option value="">Tous les pays</option>
+            <option value="sn">Sénégal</option>
+            <option value="ci">Côte d'Ivoire</option>
+            <option value="gh">Ghana</option>
+            <option value="ng">Nigeria</option>
+            <option value="cm">Cameroun</option>
+            <option value="ke">Kenya</option>
+          </select>
+          <button class="btn btn-primary" id="search-btn"><i class="fas fa-search"></i> Rechercher</button>
+        </div>
+      </div>
+
+
+      <div class="branches-layout">
+        <div class="map-placeholder">
+          <div class="map-inner">
+            <i class="fas fa-map-marked-alt"></i>
+            <p>Carte interactive</p>
+            <p style="font-size:0.85rem; opacity:0.7">Sélectionnez un pays ou une ville pour afficher les agences</p>
+            <div class="map-pins">
+              <div class="pin" style="top:30%;left:25%"><i class="fas fa-map-pin"></i><div class="pin-label">Dakar</div></div>
+              <div class="pin" style="top:40%;left:35%"><i class="fas fa-map-pin"></i><div class="pin-label">Abidjan</div></div>
+              <div class="pin" style="top:35%;left:45%"><i class="fas fa-map-pin"></i><div class="pin-label">Accra</div></div>
+              <div class="pin" style="top:38%;left:55%"><i class="fas fa-map-pin"></i><div class="pin-label">Lagos</div></div>
+              <div class="pin" style="top:45%;left:48%"><i class="fas fa-map-pin"></i><div class="pin-label">Yaoundé</div></div>
+              <div class="pin" style="top:50%;left:62%"><i class="fas fa-map-pin"></i><div class="pin-label">Nairobi</div></div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="branches-list">
+          <h3>Agences au Sénégal</h3>
+          <div class="branch-card">
+            <div class="branch-info">
+              <h4><i class="fas fa-building"></i> Ecobank Dakar Centre</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Avenue Léopold Sédar Senghor, Dakar</p>
+              <p><i class="fas fa-phone"></i> +221 33 839 09 00</p>
+              <p><i class="fas fa-clock"></i> Lun–Ven: 8h30–17h | Sam: 9h–13h</p>
+            </div>
+            <span class="branch-status open">Ouvert</span>
+          </div>
+
+
+
+
+          <div class="branch-card">
+            <div class="branch-info">
+              <h4><i class="fas fa-building"></i> Ecobank Plateau</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Rue Moussé Diop, Plateau, Dakar</p>
+              <p><i class="fas fa-phone"></i> +221 33 839 09 10</p>
+              <p><i class="fas fa-clock"></i> Lun–Ven: 8h30–17h | Sam: 9h–13h</p>
+            </div>
+            <span class="branch-status open">Ouvert</span>
+          </div>
+
+
+
+
+          <div class="branch-card">
+            <div class="branch-info">
+              <h4><i class="fas fa-building"></i> Ecobank Almadies</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Route des Almadies, Dakar</p>
+              <p><i class="fas fa-phone"></i> +221 33 839 09 20</p>
+              <p><i class="fas fa-clock"></i> Lun–Ven: 8h30–17h | Sam: 9h–13h</p>
+            </div>
+            <span class="branch-status closed">Fermé</span>
+          </div>
+
+
+
+
+
+          <div class="branch-card">
+            <div class="branch-info">
+              <h4><i class="fas fa-building"></i> Ecobank Thiès</h4>
+              <p><i class="fas fa-map-marker-alt"></i> Avenue Léon Thiaw, Thiès</p>
+              <p><i class="fas fa-phone"></i> +221 33 952 10 00</p>
+              <p><i class="fas fa-clock"></i> Lun–Ven: 8h30–17h | Sam: 9h–13h</p>
+            </div>
+            <span class="branch-status open">Ouvert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end page-branch-locator -->
+
+</main><!-- end #app -->
+
+<!-- ===== FOOTER ===== -->
+
+
+<footer class="footer">
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <div class="logo footer-logo">
+        <div class="logo-icon"><span class="logo-e">e</span></div>
+        <div class="logo-text"><span class="logo-eco">eco</span><span class="logo-bank">bank</span></div>
+      </div>
+
+      <p>La banque panafricaine leader, présente dans 35 pays d'Afrique subsaharienne depuis 1985.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+
+
+    <div class="footer-col">
+      <h4>Particuliers</h4>
+      <ul>
+        <li><a href="#" data-page="personal">Comptes courants</a></li>
+        <li><a href="#" data-page="personal">Épargne</a></li>
+        <li><a href="#" data-page="personal">Cartes bancaires</a></li>
+        <li><a href="#" data-page="personal">Crédits</a></li>
+        <li><a href="#" data-page="personal">Transferts</a></li>
+        <li><a href="#" data-page="personal">Assurances</a></li>
+      </ul>
+    </div>
+
+
+
+    <div class="footer-col">
+      <h4>Entreprises</h4>
+      <ul>
+        <li><a href="#" data-page="business">Comptes professionnels</a></li>
+        <li><a href="#" data-page="business">PME & TPE</a></li>
+        <li><a href="#" data-page="business">Grandes entreprises</a></li>
+        <li><a href="#" data-page="business">Commerce international</a></li>
+        <li><a href="#" data-page="business">Cash management</a></li>
+        <li><a href="#" data-page="business">Financements</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ecobank</h4>
+      <ul>
+        <li><a href="#" data-page="about">À propos</a></li>
+        <li><a href="#" data-page="ecobank-xpress">Ecobank Xpress</a></li>
+        <li><a href="#" data-page="invest">Investissements</a></li>
+        <li><a href="#" data-page="branch-locator">Nos agences</a></li>
+        <li><a href="#">Carrières</a></li>
+        <li><a href="#">Presse & Médias</a></li>
+      </ul>
+    </div>
+
+
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="contact-list">
+        <li><i class="fas fa-phone-alt"></i> <span>+221 33 839 09 09</span></li>
+        <li><i class="fas fa-envelope"></i> <span>contact@ecobank.com</span></li>
+        <li><i class="fas fa-map-marker-alt"></i> <span>Ecobank House, Rue de la Cathédrale, Dakar</span></li>
+        <li><i class="fas fa-clock"></i> <span>Lun–Ven: 8h30–17h30</span></li>
+      </ul>
+
+
+      <div class="newsletter">
+        <p>Restez informé :</p>
+
+
+
+        <!-- Formulaire d'inscription à la newsletter -->
+
+
+        <div class="newsletter-form">
+          <input type="email" placeholder="Votre email..." />
+          <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-mid container">
+    <div class="countries-label">Présent dans :</div>
+    <div class="countries-list">
+      <span>Bénin</span><span>Burkina Faso</span><span>Cameroun</span><span>Cap-Vert</span>
+      <span>Côte d'Ivoire</span><span>Gabon</span><span>Ghana</span><span>Guinée</span>
+      <span>Kenya</span><span>Mali</span><span>Nigeria</span><span>Sénégal</span>
+      <span>Tanzanie</span><span>Togo</span><span>+ 21 autres</span>
+    </div>
+
+
+
+
+  </div>
+  <div class="footer-bottom container">
+    <p>© 2026 Ecobank Transnational Incorporated. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+      <a href="#">Cookies</a>
+      <a href="#">Accessibilité</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script src="script E.js"></script>
+
+</body>
+</html>

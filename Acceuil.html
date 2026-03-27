@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!-- Ceci est le début de la page HTML pour la page d'accueil d'Ecobank -->
+<html lang="fr">
+<head>
+    <!-- Ici on met les informations de base de la page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobank — La Banque Panafricaine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* ===== CARROUSEL HERO ===== */
+        .slider-wrapper {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 520px;
+            overflow: hidden;
+        }
+
+        .hero-section .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        /* Image nette, couvre tout le slide */
+        .hero-section .slide img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            display: block;
+            transform: scale(1.05);
+            transition: transform 6s ease-out;
+        }
+
+        .hero-section .slide.active img {
+            transform: scale(1.0);
+        }
+
+        /* Overlay sombre par-dessus l'image */
+        .slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.42);
+            z-index: 1;
+        }
+
+        .hero-section .slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 10;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.3fr 1.1fr;
+            gap: 32px;
+            align-items: center;
+            padding: 60px 24px;
+        }
+
+        .hero-content {
+            animation: slideInLeft 0.8s ease both;
+        }
+
+        .hero-cta-group {
+            justify-self: end;
+            width: 100%;
+            max-width: 340px;
+        }
+
+        /* Flèches */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.5);
+            color: #fff;
+            font-size: 22px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(6px);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .slider-arrow:hover {
+            background: rgba(0, 163, 173, 0.75);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-prev { left: 20px; }
+        .slider-next { right: 20px; }
+
+        /* Points */
+        .slider-dots {
+            position: absolute;
+            bottom: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            border: 2px solid rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .dot.active {
+            background: #fff;
+            transform: scale(1.3);
+        }
+    </style>
+  
+</head>
+<body class="index">
+<!-- Ici commence le corps de la page -->
+
+<!-- BARRE PROMO -->
+<div class="promo-bar">
+    <i class="fas fa-star"></i>
+    Nouveau : EcobankPay — Payez et transférez partout en Afrique en quelques secondes.
+    <a href="#">En savoir plus →</a>
+</div>
+<!-- Fin de la barre promo -->
+
+<header class="ecobank-header">
+    <!-- Ici c'est le header avec la navigation en haut -->
+    <div class="header-top">
+        <nav class="user-nav">
+            <a href="Particulier.html" class="active">Particuliers</a>
+            <span style="color:#ccc">|</span>
+            <a href="Entreprises.html">Entreprises</a>
+            <span style="color:#ccc">|</span>
+            <a href="Banque_d_investissement.html">Banque d'Investissement</a>
+            <span style="color:#ccc">|</span>
+            <a href="Le_groupe.html">Le Groupe</a>
+        </nav>
+        <div class="Social-Media-Links">
+            <span>Suivez-nous :</span>
+            <a href="https://www.youtube.com/user/EcobankGroup" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/GroupEcobank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/EcobankGroup" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/GroupEcobank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ecobank-group/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <!-- Barre principale bleue -->
+    <div class="header-main-bar">
+        <div class="header-main-content container">
+            <div class="logo">
+                <span class="logo-text">ECO<span>BANK</span></span>
+            </div>
+
+            
+            <div class="actions-group">
+                <form action="#">
+                    <input type="text" placeholder="Rechercher un service...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="contact.html" class="header-action"><i class="fas fa-phone"></i> Nous Contacter</a>
+                <a href="connexion.html" class="header-action"><i class="fas fa-key"></i> Connexion</a>
+                <a href="Lancement_d_alerte.html" class="header-action"> <i class="fas fa-bell"></i> Alerte<span class="badge">!</span></a> 
+          
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation turquoise -->
+    <nav class="main-navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item home-icon">
+                    <a href="Acceuil.html" title="Accueil"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Opérations courantes <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">PME &amp; TPE</a></li>
+                        <li><a href="#">Grandes Entreprises</a></li>
+                        <li><a href="#">Commerce International</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Paiements &amp; Transferts <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Virements</a></li>
+                        <li><a href="#">Paiements de factures</a></li>
+                        <li><a href="#">Transferts internationaux</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Accès aux services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ecobank Online</a></li>
+                        <li><a href="#">Omni Lite</a></li>
+                        <li><a href="#">Omni Plus</a></li>
+                        <li><a href="#">EcobankPay</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Produits &amp; Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Comptes &amp; Épargne</a></li>
+                        <li><a href="#">Crédits &amp; Prêts</a></li>
+                        <li><a href="#">Cartes bancaires</a></li>
+                        <li><a href="#">Assurance</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">Assistance <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support technique</a></li>
+                        <li><a href="#">Contactez-nous</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link">🌏 Langues <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Portuguais</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<main>
+<!-- Ici commence le contenu principal de la page -->
+
+   
+    <!-- SECTION HERO -->
+    <!-- Ici c'est la section avec les images qui défilent -->
+    
+    <section class="hero-section">
+
+        <!-- CARROUSEL D'IMAGES -->
+        <div class="slider-wrapper">
+            <div class="slide active"><img src="assets/image1.jpeg" alt="Slide 1"><div class="slide-overlay"></div></div>
+            <div class="slide"><img src="assets/Image2.jpeg" alt="Slide 2"><div class="slide-overlay"></div></div>
+            <div class="slide"><img src="assets/Image3.jpeg" alt="Slide 3"><div class="slide-overlay"></div></div>
+            <div class="slide"><img src="assets/image4.jpeg" alt="Slide 4"><div class="slide-overlay"></div></div>
+            <div class="slide"><img src="assets/image 5 .jpeg" alt="Slide 5"><div class="slide-overlay"></div></div>
+
+            <!-- Flèches de navigation -->
+            <button class="slider-arrow slider-prev" aria-label="Image précédente">&#8592;</button>
+            <button class="slider-arrow slider-next" aria-label="Image suivante">&#8594;</button>
+
+            <!-- Points de navigation -->
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+        </div>
+
+        <div class="hero-grid container">
+            <div class="hero-content">
+                <h1>Davantage de possibilités</h1>
+                <p>Découvrez le nouveau visage de la banque panafricaine.<br>Simple. Rapide. À portée de main.</p>
+                <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
+                    <a href="connexion.html" class="btn btn-dark-blue" style="width:auto; padding: 13px 24px; text-decoration:none;"><i class="fas fa-user-circle"></i> Ouvrir un compte </a>
+                    <a href="https://youtu.be/dEvaFk8Tylc" class="btn btn-turquoise" style="width:auto; padding: 13px 24px; text-decoration:none;">
+                        <i class="fas fa-play-circle"></i> Découvrir</a>
+                </div>
+            </div>
+
+            <!-- Boîte connexion -->
+            <div class="hero-cta-group">
+                <h3><i class="fas fa-lock" style="margin-right:8px"></i> Internet Banking</h3>
+                <div class="cta-actions">
+                    <a href="connexion.html" style="text-decoration:none;">
+                        <button class="btn btn-blue" style="width:100%">
+                            <i class="fas fa-key"></i> Ecobank Online
+                        </button>
+                    </a>
+                    <div class="btn-group-row">
+                        <button class="btn btn-yellow"><i class="fas fa-user-tie"></i> Omni Lite</button>
+                        <button class="btn btn-dark-blue"><i class="fas fa-chart-line"></i> Omni Plus</button>
+                    </div>
+                    <button class="btn btn-light-blue"><i class="fas fa-mobile-alt"></i> EcobankPay</button>
+                    <div style="text-align:center; margin-top:8px;">
+                        <a href="#" style="color:rgba(255,255,255,0.7); font-size:12px; text-decoration:none;">
+                            <i class="fas fa-question-circle"></i> Besoin d'aide pour vous connecter ?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Fin de la section hero -->
+
+    <!-- ACCÈS RAPIDE -->
+    <!-- Ici on met les boutons pour accéder rapidement aux services -->
+    <section class="quick-access">
+        <div class="quick-access-grid">
+            <a href="#" class="quick-card">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Virement</span>
+            </a>
+            <a href="#" class="quick-card">
+                <i class="fas fa-credit-card"></i>
+                <span>Mes Cartes</span>
+            </a>
+            <a href="#" class="quick-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Relevé de compte</span>
+            </a>
+            <a href="#" class="quick-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nos Agences</span>
+            </a>
+        </div>
+    </section>
+<!-- Fin de l'accès rapide -->
+
+    <!-- STATS BAND -->
+    <!-- Ici on montre les chiffres importants d'Ecobank -->
+    <section class="stats-band">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="num">33</span>
+                <span class="label">Pays africains</span>
+            </div>
+            <div class="stat-item">
+                <span class="num">600+</span>
+                <span class="label">Agences et guichets</span>
+            </div>
+            <div class="stat-item">
+                <span class="num">29M+</span>
+                <span class="label">Clients actifs</span>
+            </div>
+            <div class="stat-item">
+                <span class="num">40+</span>
+                <span class="label">Années d'expérience</span>
+            </div>
+        </div>
+    </section>
+<!-- Fin des statistiques -->
+
+    <!-- SERVICES -->
+    <!-- Ici on présente les services offerts par la banque -->
+    <section style="padding: 60px 0; background: var(--bg-gray);">
+        <div class="container" style="text-align:center; margin-bottom:40px;">
+            <h2 style="font-family: var(--font-display); font-size: 36px; color: var(--eco-blue-dark); margin-bottom: 12px;">Nos Services</h2>
+            <p style="color: var(--text-mid); font-size: 16px;">Tout ce dont vous avez besoin, en un seul endroit</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-piggy-bank icon"></i>
+                <h3>Épargne & Comptes</h3>
+                <p>Gérez vos économies avec des comptes rémunérés adaptés à vos objectifs financiers.</p>
+            </div>
+            <div class="service-card stagger-2">
+                <i class="fas fa-hand-holding-usd icon"></i>
+                <h3>Crédits & Prêts</h3>
+                <p>Financement immobilier, auto, ou personnel — des solutions sur mesure pour vos projets.</p>
+            </div>
+            <div class="service-card stagger-3">
+                <i class="fas fa-globe-africa icon"></i>
+                <h3>Transferts Internationaux</h3>
+                <p>Envoyez de l'argent dans toute l'Afrique et à l'international rapidement et en toute sécurité.</p>
+            </div>
+        </div>
+    </section>
+<!-- Fin des services -->
+
+    <!-- PARTENAIRES -->
+    <!-- Ici on montre les partenaires d'Ecobank -->
+    <section class="partners-section">
+        <h2>Nos partenaires de confiance</h2>
+        <div class="partners-logos">
+            <span class="partner-logo">MASTERCARD</span>
+            <span class="partner-logo">VISA</span>
+            <span class="partner-logo">SWIFT</span>
+            <span class="partner-logo">UEMOA</span>
+            <span class="partner-logo">BCEAO</span>
+        </div>
+    </section>
+</main>
+<!-- Fin du contenu principal -->
+
+<!-- FOOTER -->
+<!-- Ici c'est le pied de page avec les liens -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo-text" style="font-family: 'Playfair Display', serif; font-size: 26px; color: white; font-weight:700; margin-bottom: 12px;">
+                ECO<span style="color:var(--eco-yellow)">BANK</span>
+            </div>
+            <p>La banque panafricaine au service de 33 pays. Votre partenaire financier de confiance depuis plus de 40 ans.</p>
+            <div class="footer-socials" style="margin-top:16px;">
+                <a href="https://www.youtube.com/user/EcobankGroup"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/GroupEcobank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/EcobankGroup"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/GroupEcobank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/ecobank-group/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> Comptes courants</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> Épargne</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> Crédits</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> Transferts</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> EcobankPay</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Le Groupe</h4>
+            <ul>
+                <li><a href="Le_groupe.html"><i class="fas fa-chevron-right" style="font-size:10px"></i> À propos</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> Carrières</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> Actualités</a></li>
+                <li><a href="Banque_d_investissement.html"><i class="fas fa-chevron-right" style="font-size:10px"></i> Investissement</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:10px"></i> Nous Contacter</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> FAQ</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:10px"></i> Sécurité</a></li>
+                <li><a href="Lancement_d_alerte.html"><i class="fas fa-chevron-right" style="font-size:10px"></i> Lancement d'alerte</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Ecobank Group — Tous droits réservés</span>
+        <div style="display:flex; gap:16px;">
+            <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none; font-size:12px; transition:var(--transition)">Mentions légales</a>
+            <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none; font-size:12px; transition:var(--transition)">Confidentialité</a>
+            <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none; font-size:12px; transition:var(--transition)">Cookies</a>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+<!-- Script pour les fonctionnalités de la page -->
+<script>
+// ===== DROPDOWNS AU CLIC =====
+// Ici on gère les menus déroulants quand on clique dessus
+document.querySelectorAll('.nav-item.has-dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const item = this.closest('.nav-item');
+        const isOpen = item.classList.contains('open');
+        // Fermer tous les dropdowns
+        document.querySelectorAll('.nav-item.has-dropdown').forEach(i => i.classList.remove('open'));
+        // Ouvrir celui cliqué sauf s'il était déjà ouvert
+        if (!isOpen) item.classList.add('open');
+    });
+});
+// Clic ailleurs = fermer tout
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item.has-dropdown')) {
+        document.querySelectorAll('.nav-item.has-dropdown').forEach(i => i.classList.remove('open'));
+    }
+});
+
+// ===== CARROUSEL AUTOMATIQUE =====
+// Ici on fait défiler les images automatiquement
+(function () {
+    const slides = document.querySelectorAll('.hero-section .slide');
+    const dots   = document.querySelectorAll('.slider-dots .dot');
+    const prev   = document.querySelector('.slider-prev');
+    const next   = document.querySelector('.slider-next');
+
+    if (!slides.length) return;
+
+    let current = 0;
+    let timer   = null;
+    const DELAY = 5000;
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    function startAuto() { timer = setInterval(() => goTo(current + 1), DELAY); }
+    function resetAuto()  { clearInterval(timer); startAuto(); }
+
+    prev.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+    next.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.index)); resetAuto(); });
+    });
+
+    const wrapper = document.querySelector('.slider-wrapper');
+    wrapper.addEventListener('mouseenter', () => clearInterval(timer));
+    wrapper.addEventListener('mouseleave', startAuto);
+
+    startAuto();
+})();
+</script>
+</body>
+</html>

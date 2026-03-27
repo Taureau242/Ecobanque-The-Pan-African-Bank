@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- Ceci est la page de contact d'Ecobank -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobank — Nous Contacter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+
+
+<!-- La tête de la page -->
+<body>
+
+<nav class="navbar">
+    <a href="Acceuil.html" class="logo" style="text-decoration:none; font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:white;">
+        ECO<span style="color:var(--eco-yellow)">BANK</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="Acceuil.html"><i class="fas fa-home" style="margin-right:5px"></i>Accueil</a></li>
+        <li><a href="Particulier.html">Particuliers</a></li>
+        <li><a href="Le_groupe.html">Le Groupe</a></li>
+        <li><a href="contact.html" style="color:var(--eco-yellow)">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- La barre de navigation -->
+
+
+<main>
+    
+    
+    <!-- Hero contact -->
+    <div class="contact-hero">
+        <h1>Parlons-en</h1>
+        <p>Notre équipe est disponible pour répondre à toutes vos questions.</p>
+    </div>
+
+
+
+    <!-- La section hero pour le contact -->
+   
+
+<!-- Cartes info -->
+    
+    
+    <div class="contact-info-grid">
+        <div class="contact-info-card stagger-1">
+            <div class="icon-circle">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Téléphone</h3>
+           <p><a href="tel:+22133 859 99 99"><i class="fas fa-phone" style="margin-right:5px"></i> Contact <br></a><a href="https://wa.me/22133 859 99 99"><i class="fas fa-whatsapp" style="margin-right:5px"></i>WhatsApp</a> <br>Lun–Ven, 8h–18h</p> 
+        </div>
+        <div class="contact-info-card stagger-2">
+            <div class="icon-circle" style="background: linear-gradient(135deg, var(--eco-turquoise), #007b78);">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h3>E-mail</h3>
+          <p><a href="mailto:ecobank@sentoo.sn?subject=Demande d'information&body=Bonjour,%20je%20souhaite%20obtenir%20plus%20d'informations.">
+    <i class="fas fa-envelope" style="margin-right:5px"></i>Envoyer un email</p>
+        </div>
+        <div class="contact-info-card stagger-3">
+            <div class="icon-circle" style="background: linear-gradient(135deg, var(--eco-yellow), #b8d619); color: var(--eco-blue-dark);">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Siège Dakar</h3>
+            <p>Immeuble SDIH, Rue du Dr Thèze<br>BP 9095, Dakar</p>
+        </div>
+    </div>
+<!-- Les informations de contact -->
+    
+<!-- Formulaire -->
+    
+<div class="contact-section">
+        <h2 style="font-family:var(--font-display); font-size:28px; color:var(--eco-blue-dark); margin-bottom:8px;">Envoyez-nous un message</h2>
+        <p style="color:var(--text-mid); font-size:14px; margin-bottom:32px;">Remplissez le formulaire et nous vous répondrons dans les plus brefs délais.</p>
+
+       
+        <form onsubmit="handleContact(event)">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;" class="form-two-cols">
+                <div class="form-group">
+                    <label>Prénom *</label>
+                    <input type="text" class="form-field" placeholder="Votre prénom" required>
+                </div>
+                <div class="form-group">
+                    <label>Nom *</label>
+                    <input type="text" class="form-field" placeholder="Votre nom" required>
+                </div>
+            </div>
+
+            
+            
+            
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;" class="form-two-cols">
+                <div class="form-group">
+                    <label>E-mail *</label>
+                    <input type="email" class="form-field" placeholder="votre@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" class="form-field" placeholder="+221 77 000 00 00">
+                </div>
+            </div>
+
+           
+            <div class="form-group">
+                <label>Sujet de votre demande *</label>
+                <select class="form-field" required style="appearance:none; background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 10 5%22><path fill=%22%23666%22 d=%22M0 0l5 5 5-5z%22/></svg>'); background-repeat:no-repeat; background-position:right 14px center; padding-right:40px;">
+                    <option value="" disabled selected>Sélectionnez un sujet</option>
+                    <option>Ouverture de compte</option>
+                    <option>Problème de connexion</option>
+                    <option>Virement / Transfert</option>
+                    <option>Carte bancaire</option>
+                    <option>Crédit / Prêt</option>
+                    <option>Réclamation</option>
+                    <option>Autre</option>
+                </select>
+            </div>
+
+           
+            <div class="form-group">
+                <label>Votre message *</label>
+                <textarea class="form-field" placeholder="Décrivez votre demande en détail..." required></textarea>
+            </div>
+
+
+
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+                <input type="checkbox" id="rgpd" style="accent-color:var(--eco-blue-dark); width:16px; height:16px;" required>
+                <label for="rgpd" style="font-size:13px; color:var(--text-mid); cursor:pointer;">
+                    J'accepte la <a href="#" style="color:var(--eco-blue-mid)">politique de confidentialité</a> d'Ecobank
+                </label>
+            </div>
+
+          
+          
+            <button type="submit" style="width:100%; padding:15px; background:linear-gradient(135deg,var(--eco-blue-dark),var(--eco-blue-mid)); color:white; border:none; border-radius:6px; font-size:16px; font-weight:700; font-family:var(--font-main); cursor:pointer; transition:var(--transition); display:flex; align-items:center; justify-content:center; gap:10px;" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Envoyer le message
+            </button>
+        </form>
+    </div>
+</main>
+
+
+ <!-- Footer -->
+
+<footer style="background:var(--eco-blue-dark); color:rgba(255,255,255,0.55); text-align:center; padding:24px; font-size:13px; margin-top:0;">
+    © 2026 Ecobank Group — Tous droits réservés
+</footer>
+
+ <script src="script.js"></script>
+</body>
+
+</html>

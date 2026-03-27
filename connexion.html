@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Ceci est la page de connexion pour les clients Ecobank -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobank — Connexion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+
+<!-- La tête avec les styles -->
+ 
+
+<body class="login-page">
+
+<!-- Particules décoratives -->
+
+<div style="position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;">
+    <div style="position:absolute; width:3px; height:3px; background:rgba(154,197,23,0.6); border-radius:50%; top:15%; left:20%; animation: float 7s ease-in-out infinite;"></div>
+    <div style="position:absolute; width:4px; height:4px; background:rgba(0,161,156,0.5); border-radius:50%; top:70%; left:75%; animation: float 9s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute; width:2px; height:2px; background:rgba(255,255,255,0.4); border-radius:50%; top:40%; left:60%; animation: float 11s ease-in-out infinite;"></div>
+    <div style="position:absolute; width:5px; height:5px; background:rgba(154,197,23,0.3); border-radius:50%; top:85%; left:30%; animation: float 8s ease-in-out infinite;"></div>
+</div>
+
+
+<!-- Des petits points décoratifs -->
+
+<div class="login-container">
+   
+    <!-- Logo -->
+    
+    <div class="login-logo">
+        <div class="logo-text" style="font-family:'Playfair Display',serif; font-size:32px; color:var(--eco-blue-dark); font-weight:700;">
+            ECO<span style="color:var(--eco-turquoise)">BANK</span>
+        </div>
+        <div style="margin-top:6px; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--text-light); font-weight:600;">The Pan African Bank</div>
+    </div>
+
+    <!-- Le logo d'Ecobank -->
+    
+    <h2>Bon retour !</h2>
+    <p class="subtitle">Connectez-vous à votre espace personnel</p>
+
+    <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+            <label for="email"><i class="fas fa-envelope" style="margin-right:6px; color:var(--eco-blue-mid)"></i> Adresse e-mail</label>
+            <div style="position:relative;">
+                <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                <input type="email" id="email" class="form-field" placeholder="votre@email.com" required style="padding-left:44px; width:100%; border:2px solid #e2eaf0; border-radius:6px; background:var(--bg-gray); font-family:var(--font-main); outline:none; transition:var(--transition); padding:13px 16px 13px 44px; font-size:14px; color:var(--text-dark);">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password"><i class="fas fa-lock" style="margin-right:6px; color:var(--eco-blue-mid)"></i> Mot de passe</label>
+            <div style="position:relative;">
+                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                <input type="password" id="password" class="form-field" placeholder="••••••••" required style="padding-left:44px; width:100%; border:2px solid #e2eaf0; border-radius:6px; background:var(--bg-gray); font-family:var(--font-main); outline:none; transition:var(--transition); padding:13px 44px 13px 44px; font-size:14px; color:var(--text-dark);">
+                <button type="button" onclick="togglePassword()" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; color:var(--text-light); font-size:16px; padding:4px;" title="Afficher/masquer">
+                    <i class="fas fa-eye" id="eyeIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+            <label style="display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text-mid); cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--eco-blue-dark); width:16px; height:16px;">
+                Se souvenir de moi
+            </label>
+            <a href="#" style="font-size:13px; color:var(--eco-blue-mid); text-decoration:none; font-weight:600; transition:var(--transition);">Mot de passe oublié ?</a>
+        </div>
+
+        <button type="submit" class="btn-login">
+            <i class="fas fa-sign-in-alt" style="margin-right:8px;"></i> Se connecter
+        </button>
+    </form>
+
+
+<!-- Le formulaire pour se connecter -->
+    
+<div class="divider">ou continuer avec</div>
+
+    <div class="other-options">
+        <button onclick="window.location.href='#'">
+            <i class="fas fa-mobile-alt" style="color:var(--eco-blue-mid); margin-right:6px;"></i> Mobile Banking
+        </button>
+        <button onclick="window.location.href='#'">
+            <i class="fas fa-id-card" style="color:var(--eco-turquoise); margin-right:6px;"></i> Token SMS
+        </button>
+    </div>
+
+<!-- Les autres moyens de se connecter -->
+    
+<p style="text-align:center; margin-top:24px; font-size:13px; color:var(--text-light);">
+        Pas encore client ?
+        <a href="#" style="color:var(--eco-blue-dark); font-weight:700; text-decoration:none;">Ouvrir un compte gratuitement →</a>
+    </p>
+
+</div>
+
+    <!-- Pour les nouveaux clients -->
+
+
+
+<!-- Footer minimal -->
+
+<div style="position:fixed; bottom:0; left:0; right:0; text-align:center; padding:12px; font-size:11px; color:rgba(255,255,255,0.5); z-index:3;">
+    © 2026 Ecobank Group — <a href="#" style="color:rgba(255,255,255,0.5);">Mentions légales</a> — <a href="#" style="color:rgba(255,255,255,0.5);">Confidentialité</a>
+</div>
+<!-- Le petit pied de page -->
+<script src="script.js"></script>
+<!-- Le script pour la page -->
+</body>
+</html>
