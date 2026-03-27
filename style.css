@@ -3755,29 +3755,43 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
 }
 
 /* Mobile */
+/* --- ADAPTATION MOBILE --- */
 @media (max-width: 768px) {
-  .topbar { display: none; }
+    /* On empile les éléments du menu au lieu de les mettre côte à côte */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
 
-  .hamburger { display: flex; }
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    flex-direction: column;
-    align-items: stretch;
-    padding: 16px;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: var(--transition);
-    max-height: calc(100vh - 70px);
-    overflow-y: auto;
-    z-index: 999;
-    gap: 4px;
-  }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    /* On réduit la taille des gros titres */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* On s'assure que les images ne dépassent jamais de l'écran */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Pour ton bandeau vert du haut qui semble trop grand */
+    .header-top {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
   .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: all; }
   .nav-link { padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.9rem; }
   .dropdown {
@@ -3827,7 +3841,6 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
   .slide-actions .btn { text-align: center; justify-content: center; }
   .news-card.small { flex-direction: column; }
   .news-img-small { width: 100%; height: 80px; }
-}
 
 @media (max-width: 480px) {
   .qs-grid { grid-template-columns: 1fr 1fr; }
