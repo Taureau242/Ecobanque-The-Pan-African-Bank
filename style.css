@@ -3896,26 +3896,40 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
 /* --- SPECIAL MOBILE (IPHONE / ANDROID) --- */
 @media screen and (max-width: 480px) {
     
-    /* On empêche le contenu de "pousser" les bords de l'iPhone */
+   /* 1. On empêche TOUT le site de glisser vers la droite */
     html, body {
-        overflow-x: hidden;
-        position: relative;
-        width: 100%;
-    }
-
-    /* On force les menus à se mettre l'un sous l'autre */
-    .nav, .menu, .header-content {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 10px !important;
-    }
-
-    /* On réduit le texte pour qu'il tienne sur une ligne d'iPhone */
-    h1, .hero-title {
-        font-size: 1.6rem !important;
-        text-align: center;
+        overflow-x: hidden !important;
         width: 100% !important;
+        position: relative;
     }
+
+    /* 2. Correction pour la zone "Particuliers / Entreprises" (Cercle 1) */
+    /* On les force à s'empiler pour qu'ils ne dépassent pas */
+    .nav, .menu-top, .navigation { 
+        display: flex !important;
+        flex-wrap: wrap !important; /* Permet d'aller à la ligne */
+        justify-content: center !important;
+        gap: 5px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* 3. Correction pour le titre "Ecobank Mobile" (Cercle 2) */
+    /* On réduit la taille pour qu'il tienne sur la largeur de l'écran */
+    h1, .hero-title, .main-title {
+        font-size: 1.4rem !important; /* On réduit la police */
+        width: 90% !important; /* On laisse de l'espace sur les côtés */
+        margin: 0 auto !important; /* On centre le texte */
+        word-wrap: break-word !important; /* On coupe les mots si besoin */
+        white-space: normal !important; /* On autorise le retour à la ligne */
+    }
+
+    /* 4. On s'assure que les conteneurs ne font pas plus de 100% */
+    section, div, header {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
 
     /* Tes boutons (Ouvrir un compte) doivent être larges pour le pouce */
     .btn, .button {
@@ -3927,4 +3941,60 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
     .hero-section {
     background-attachment: scroll !important; /* Fixe le bug de tremblement sur iPhone */
 }
+/* Force les liens à s'empiler en colonne ou à aller à la ligne */
+    .nav-container, .menu, .header-top-menu, ul[class*="nav"] {
+        display: flex !important;
+        flex-direction: column !important; /* Empilement vertical */
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        padding: 10px 0 !important;
+    }
+
+    .nav-item, .menu-item, li[class*="nav"] {
+        width: 90% !important; /* Prend presque toute la largeur */
+        text-align: center !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1) !important; /* Petite ligne séparatrice */
+        padding: 8px 0 !important;
+    }
+    .hero-slider, .slide-content, .carousel-item {
+        display: flex !important;
+        flex-direction: column !important; /* Empilement vertical */
+        padding: 15px !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+
+    /* Le bloc de texte "Davantage de possibilités" */
+    .hero-content, .slide-text, .carousel-caption {
+        width: 100% !important;
+        max-width: 100% !important;
+        position: static !important; 
+        margin-bottom: 20px !important;
+        text-align: center !important;
+        padding: 15px !important;
+    }
+
+    /* La barre bleue latérale "Internet Banking" */
+    .hero-cta-group, .hero-sidebar, .carousel-sidebar {
+        width: 100% !important;
+        max-width: 90% !important; 
+        position: static !important; 
+        margin: 10px auto !important;
+        display: flex !important;
+        flex-direction: row !important; 
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        padding: 15px !important;
+    }
+
+    /* Les icônes individuelles dans la barre bleue */
+    .hero-action, .sidebar-item {
+        width: auto !important;
+        min-width: 70px !important;
+        font-size: 0.75rem !important; 
+        flex-direction: column !important; 
+        align-items: center !important;
+    }
 }
