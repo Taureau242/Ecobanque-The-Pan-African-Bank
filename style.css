@@ -3973,52 +3973,46 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
     }
 
 
-    @media screen and (max-width: 480px) {
-
-.hero-section {
-    /* Sur PC, on aligne le texte plus à gauche avec plus d'espace */
-    padding-left: 10%; 
-    align-items: flex-start;
-  }
-
-  .hero-content {
-    /* On limite la largeur du bloc de texte pour qu'il ne s'étale pas trop */
-    max-width: 50%; 
-  }
-
-  .hero-content h1 {
-    /* On peut agrandir un peu la police sur grand écran */
-    font-size: 4rem;
-  }
-
-
-
-  .votre-menu-navigation {
-        flex-direction: column;
-        align-items: stretch;
+   /* --- TOUTES LES MODIFICATIONS MOBILE ICI --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. On empêche le site de dépasser sur les côtés */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-.nav-container {
-    display: flex;
-    flex-wrap: wrap; /* Crucial pour que les éléments descendent s'il n'y a plus de place */
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
+    /* 2. On force les éléments du menu à s'empiler proprement */
+    .nav, .menu, .nav-container { 
+        display: flex !important;
+        flex-direction: column !important; /* On les met les uns sous les autres */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
 
-.nav-item {
-    flex: 1 1 auto; /* Permet aux éléments de s'ajuster */
-    text-align: center;
-    min-width: 80px; /* Évite qu'ils ne deviennent trop minuscules */
-}
+    /* 3. On réduit le titre "Ecobank Mobile" pour qu'il ne coupe pas */
+    h1, .hero-title, .title-main {
+        font-size: 1.8rem !important; /* Taille plus petite pour mobile */
+        line-height: 1.2;
+        word-wrap: break-word;
+        padding: 0 15px; /* Petite marge pour ne pas toucher les bords */
+    }
 
-/* Remplace la taille fixe de ton titre principal (h1 ou .hero-title) */
-.hero-title {
-    font-size: clamp(1.5rem, 8vw, 3rem); /* Minimum 1.5rem, s'adapte à 8% de l'écran, Max 3rem */
-    width: 100%;
-    word-wrap: break-word; /* Force la coupure si un mot est trop long */
-    line-height: 1.2;
-}
+    /* 4. On ajuste tes boutons (Image 2) pour qu'ils soient faciles à cliquer */
+    .btn, .button, a[class*="btn"] {
+        width: 90% !important; /* Presque toute la largeur */
+        margin: 10px auto !important;
+        display: block !important;
+        padding: 15px 0;
+    }
 
-
+    /* 5. On s'assure que l'image de fond couvre tout l'écran de l'iPhone */
+    .hero-section, .banner {
+        height: auto !important;
+        min-height: 100vh;
+        background-attachment: scroll; /* Important pour les bugs iOS */
+    }
 }
