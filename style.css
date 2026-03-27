@@ -3892,34 +3892,39 @@ input[type="range"]::-webkit-slider-thumb:hover { box-shadow: 0 0 0 8px rgba(0,8
   .search-controls { flex-direction: column; }
 }
 
-
 /* --- STYLE POUR TOUS LES SMARTPHONES --- */
-@media screen and (max-width: 767px) {
-  .hero-section {
-    height: 100vh;
-    padding: 2rem 1.5rem; /* Marges fluides */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centre le contenu verticalement */
-  }
+/* --- SPECIAL MOBILE (IPHONE / ANDROID) --- */
+@media screen and (max-width: 480px) {
+    
+    /* On empêche le contenu de "pousser" les bords de l'iPhone */
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+    }
 
-  .hero-content h1 {
-    /* Utilise clamp pour que le titre ne soit ni trop gros ni trop petit */
-    font-size: clamp(1.8rem, 8vw, 2.5rem); 
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
+    /* On force les menus à se mettre l'un sous l'autre */
+    .nav, .menu, .header-content {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 10px !important;
+    }
 
-  .hero-content p {
-    font-size: 1rem;
-    max-width: 90%; /* Évite que le texte touche le bord droit */
-  }
+    /* On réduit le texte pour qu'il tienne sur une ligne d'iPhone */
+    h1, .hero-title {
+        font-size: 1.6rem !important;
+        text-align: center;
+        width: 100% !important;
+    }
 
-  .btn-discover {
-    width: 100%; /* Le bouton prend toute la largeur sur petit téléphone */
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto; /* Pousse le bouton vers le bas si besoin */
-  }
+    /* Tes boutons (Ouvrir un compte) doivent être larges pour le pouce */
+    .btn, .button {
+        width: 90% !important;
+        margin: 10px auto !important;
+        display: block !important;
+    }
+
+    .hero-section {
+    background-attachment: scroll !important; /* Fixe le bug de tremblement sur iPhone */
 }
-  
+}
